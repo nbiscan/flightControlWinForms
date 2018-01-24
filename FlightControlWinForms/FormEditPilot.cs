@@ -14,6 +14,11 @@ namespace FlightControlWinForms
         public FormEditPilot()
         {
             InitializeComponent();
+
+
+            BindingSource bindingSource1 = new BindingSource();
+            bindingSource1.DataSource = Program.MyConnection.Pilot.Get(1);
         }
+
     }
 }

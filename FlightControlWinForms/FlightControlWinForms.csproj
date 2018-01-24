@@ -42,6 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddAirport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddAirport.Designer.cs">
+      <DependentUpon>FormAddAirport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddCountry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCountry.Designer.cs">
+      <DependentUpon>FormAddCountry.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddFlight.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,11 +66,41 @@
     <Compile Include="FormAddPilot.Designer.cs">
       <DependentUpon>FormAddPilot.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddPlane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddPlane.Designer.cs">
+      <DependentUpon>FormAddPlane.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddStore.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAddStore.Designer.cs">
       <DependentUpon>FormAddStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditAirport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditAirport.Designer.cs">
+      <DependentUpon>FormEditAirport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditCountry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditCountry.Designer.cs">
+      <DependentUpon>FormEditCountry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditPilot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditPilot.Designer.cs">
+      <DependentUpon>FormEditPilot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditPlane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditPlane.Designer.cs">
+      <DependentUpon>FormEditPlane.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditStore.cs">
       <SubType>Form</SubType>
@@ -91,6 +133,12 @@
     <EmbeddedResource Include="FormAddStore.resx">
       <DependentUpon>FormAddStore.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditAirport.resx">
+      <DependentUpon>FormEditAirport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditPilot.resx">
+      <DependentUpon>FormEditPilot.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditStore.resx">
       <DependentUpon>FormEditStore.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +166,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlightControlModel\FlightControlModel.csproj">
+      <Project>{23b5efed-d66f-48cf-a026-7461704e7de8}</Project>
+      <Name>FlightControlModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

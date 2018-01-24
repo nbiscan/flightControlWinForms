@@ -1,0 +1,7 @@
+C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlModel\obj\Debug\FlightControlModel.Properties.Resources.resources
+C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlModel\obj\Debug\FlightControlModel.csproj.GenerateResource.Cache
+C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlModel\obj\Debug\FlightControlModel.csprojResolveAssemblyReference.cache
+C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlModel\bin\Debug\FlightControlModel.dll
+C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlModel\bin\Debug\FlightControlModel.pdb
+C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlModel\obj\Debug\FlightControlModel.dll
+C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlModel\obj\Debug\FlightControlModel.pdb

@@ -8,12 +8,12 @@ namespace FlightControlApi.Models
 {
     public class Country
     {
-        public virtual Int64 Id { get; set; }
-        public virtual string iso { get; set; }
-        public virtual string name { get; set; }
-        public virtual string printable_name { get; set; }
-        public virtual string iso3 { get; set; }
-        public virtual int numcode { get; set; }
+        public   Int64 Id { get; set; }
+        public   string iso { get; set; }
+        public   string name { get; set; }
+        public   string printable_name { get; set; }
+        public   string iso3 { get; set; }
+        public   int numcode { get; set; }
        
     }
 }

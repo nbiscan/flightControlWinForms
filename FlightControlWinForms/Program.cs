@@ -4,13 +4,14 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using FlightControlModel;
 
 
 namespace FlightControlWinForms
 {
     static class Program
     {
-        public static SqlConnection MyConnection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["Data Source=op-projekt.database.windows.net;Initial Catalog=op;Integrated Security=False;User ID=mislav;Password=PassWord123;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"]);
+        public static DB MyConnection = new MSSQLDatabase("Data Source=op-projekt.database.windows.net;Initial Catalog=op;Integrated Security=False;User ID=mislav;Password=PassWord123;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
         /// <summary>
         /// The main entry point for the application.
