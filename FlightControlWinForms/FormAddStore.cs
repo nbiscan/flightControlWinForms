@@ -15,5 +15,10 @@ namespace FlightControlWinForms
         {
             InitializeComponent();
         }
+
+        private void FormAddStore_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

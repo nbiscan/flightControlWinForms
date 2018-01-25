@@ -160,11 +160,29 @@
     <Compile Include="MainController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddAirport.resx">
+      <DependentUpon>FormAddAirport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddCountry.resx">
+      <DependentUpon>FormAddCountry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddFlight.resx">
       <DependentUpon>FormAddFlight.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddPassenger.resx">
+      <DependentUpon>FormAddPassenger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddPilot.resx">
       <DependentUpon>FormAddPilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddPlane.resx">
+      <DependentUpon>FormAddPlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddRoute.resx">
+      <DependentUpon>FormAddRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddSeat.resx">
+      <DependentUpon>FormAddSeat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddStore.resx">
       <DependentUpon>FormAddStore.cs</DependentUpon>

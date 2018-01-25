@@ -220,7 +220,6 @@ namespace FlightControlWinForms
             fes.ShowDialog();
         }
 
-
         public void ViewStores()
         {
             FormEditStore fes = new FormEditStore();
