@@ -15,12 +15,12 @@ namespace FlightControlWinForms
         {
             InitializeComponent();
 
-            FlightControlApi.Models.Plane[] pilots = Program.MyConnection.Plane.GetAll().ToArray();
+            FlightControlApi.Models.Plane[] planes = Program.MyConnection.Plane.GetAll().ToArray();
 
             string[] tmpPlane = new string[8];
             ListViewItem lvi;
 
-            foreach (FlightControlApi.Models.Plane p in pilots)
+            foreach (FlightControlApi.Models.Plane p in planes)
             {
                 tmpPlane[0] = p.Id.ToString();
                 tmpPlane[1] = p.Model;

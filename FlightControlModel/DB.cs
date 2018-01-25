@@ -45,6 +45,15 @@ namespace FlightControlModel
 
             _pilot = new PilotService(new PilotRepo(_connection, _command));
             _airport = new AirportService(new AirportRepo(_connection, _command));
+            _country = new CountryService(new CountryRepo(_connection, _command));
+            _flight = new FlightService(new FlightRepo(_connection, _command));
+            _passenger = new PassengerService(new PassengerRepo(_connection, _command));
+            _plane = new PlaneService(new PlaneRepo(_connection, _command));
+            _route = new RouteService(new RouteRepo(_connection, _command));
+            _seat = new SeatService(new SeatRepo(_connection, _command));
+            _seatClass = new SeatClassService(new SeatClassRepo(_connection, _command));
+            _store = new StoreService(new StoreRepo(_connection, _command));
+
         }
     }
 }
