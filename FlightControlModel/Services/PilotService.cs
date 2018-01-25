@@ -13,27 +13,27 @@ namespace FlightControlModel.Services
             _pilotRepository = pilotRepository;
         }
 
-        //public Pilot GetAll()
-        //{
-        //    return _pilotRepository.GetAll();
-        //}
+        public List<Pilot> GetAll()
+        {
+            return _pilotRepository.GetAll();
+        }
 
         public Pilot Get(int unid)
         {
             return _pilotRepository.Get(unid);
         }
 
-        //public int Insert(Pilot p)
+        public int Insert(Pilot p)
+        {
+            return _pilotRepository.Insert(p);
+        }
+        //public bool Update(Pilot p)
         //{
-        //    return _pilotRepository.Insert(a);
+        //    return _pilotRepository.Update(p);
         //}
-        //public bool Update(Account a)
-        //{
-        //    return _pilot.Update(a);
-        //}
-        //public bool Delete(int unid)
-        //{
-        //    return _accountRepository.Delete(unid);
-        //}
+        public bool Delete(int unid)
+        {
+            return _pilotRepository.Delete(unid);
+        }
     }
 }

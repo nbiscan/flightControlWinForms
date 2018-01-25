@@ -68,5 +68,10 @@ namespace FlightControlWinForms
         {
             _controller.ViewAirports();
         }
+
+        private void viewPilotsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.ViewPilots();
+        }
     }
 }

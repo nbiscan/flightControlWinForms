@@ -58,21 +58,113 @@ namespace FlightControlModel.Repos
 
 
         }
-        //public  List<Pilot> GetAll()
+        public List<Pilot> GetAll()
+        {
+            List<int> allPilotsIDs = new List<int>();
+            List<Pilot> allPilots = new List<Pilot>();
+
+            _comm.CommandText = "SELECT * " +
+                                "FROM Pilot p ";
+
+            _conn.Open();
+
+            try
+            {
+                using (IDataReader rdr = _comm.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        allPilotsIDs.Add(Convert.ToInt32(rdr["ID"]));
+                    }
+                }
+
+                _conn.Close();
+
+                foreach (int id in allPilotsIDs)
+                {
+                    allPilots.Add(this.Get(id));
+                }
+
+                return allPilots;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        public int Insert(Pilot p)
+        {
+            _comm.CommandText = "INSERT INTO Pilot " +
+                                "(Id, FirstName, LastName, BirthDay) " +
+                                "VALUES " +
+                                "(@id, @firstname, @lastname, @birthday);" +
+                                "SELECT SCOPE_IDENTITY();";
+
+            _comm.AddParameter("@id", p.Id);
+            _comm.AddParameter("@firstname", p.FirstName);
+            _comm.AddParameter("@lastname", p.LastName);
+            _comm.AddParameter("@birthday", p.BirthDay);
+
+            _conn.Open();
+
+            try
+            {
+                int recordID = Convert.ToInt32(_comm.ExecuteScalar());
+
+                _comm.Parameters.Clear();
+                _conn.Close();
+
+                return recordID;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                _comm.Parameters.Clear();
+                _conn.Close();
+            }
+        }
+        //public bool Update(int id, Pilot a)
         //{
 
         //}
-        //public  int Insert(Pilot a)
-        //{
+        public bool Delete(int id)
+        {
+            _comm.CommandText = "DELETE FROM Pilot " +
+                                           "WHERE Pilot.Id = @id;";
 
-        //}
-        //public  bool Update(int id, Pilot a)
-        //{
+            _comm.AddParameter("@id", id);
 
-        //}
-        //public  bool Delete(int id)
-        //{
+            _conn.Open();
 
-        //}
+            _trans = _conn.BeginTransaction();
+
+            _comm.Transaction = _trans;
+
+            try
+            {
+                _comm.ExecuteNonQuery();
+                _trans.Commit();
+            }
+            catch (Exception ex)
+            {
+                _trans.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                _comm.Transaction = null;
+                _comm.Parameters.Clear();
+                _conn.Close();
+            }
+
+            return true;
+        }
     }
 }
