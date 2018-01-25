@@ -67,10 +67,22 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AirportRepo.cs" />
+    <Compile Include="Repos\CountryRepo.cs" />
     <Compile Include="Repos\CRUD.cs" />
+    <Compile Include="Repos\FlightRepo.cs" />
     <Compile Include="Repos\PilotRepo.cs" />
+    <Compile Include="Repos\PlaneRepo.cs" />
+    <Compile Include="Repos\RouteRepo.cs" />
+    <Compile Include="Repos\SeatRepo.cs" />
     <Compile Include="Services\AirportService.cs" />
+    <Compile Include="Services\CountryService.cs" />
+    <Compile Include="Services\FlightService.cs" />
+    <Compile Include="Repos\PassengerRepo.cs" />
+    <Compile Include="Services\PassengerService.cs" />
     <Compile Include="Services\PilotService.cs" />
+    <Compile Include="Services\PlaneService.cs" />
+    <Compile Include="Services\RouteService.cs" />
+    <Compile Include="Services\SeatService.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

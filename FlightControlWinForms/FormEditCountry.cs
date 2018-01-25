@@ -14,6 +14,27 @@ namespace FlightControlWinForms
         public FormEditCountry()
         {
             InitializeComponent();
+
+            FlightControlApi.Models.Country[] items = Program.MyConnection.Country.GetAll().ToArray();
+
+            string[] tmpCountry = new string[6];
+            ListViewItem lvi;
+
+            foreach (FlightControlApi.Models.Country p in items)
+            {
+                tmpCountry[0] = p.Id.ToString();
+                tmpCountry[1] = p.iso;
+                tmpCountry[2] = p.name;
+                tmpCountry[3] = p.iso3;
+                tmpCountry[4] = p.printable_name;
+                tmpCountry[5] = p.numcode.ToString();
+
+
+                lvi = new ListViewItem(tmpCountry);
+
+                listView1.Items.Add(lvi);
+
+            }
         }
     }
 }
