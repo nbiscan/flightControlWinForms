@@ -15,11 +15,25 @@ namespace FlightControlWinForms
         {
             InitializeComponent();
 
+            FlightControlApi.Models.Pilot[] pilots = Program.MyConnection.Pilot.GetAll().ToArray();
 
-            BindingSource bindingSource1 = new BindingSource();
-            bindingSource1.DataSource = Program.MyConnection.Pilot.GetAll();
+            string[] tmpPilot = new string[5];
+            ListViewItem lvi;
 
-            // listView1.Items.Add("bla");
+            foreach (FlightControlApi.Models.Pilot p in pilots)
+            {
+                tmpPilot[0] = p.Id.ToString();
+                tmpPilot[1] = p.FirstName;
+                tmpPilot[2] = p.LastName;
+                tmpPilot[3] = p.BirthDay.ToString();
+                tmpPilot[4] = p.Active.ToString();
+
+                lvi = new ListViewItem(tmpPilot);
+
+                listView1.Items.Add(lvi);
+
+            }
+            
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

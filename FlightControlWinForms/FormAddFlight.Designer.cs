@@ -45,6 +45,8 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +68,7 @@
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(259, 244);
+            this.comboBox2.Location = new System.Drawing.Point(258, 248);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(616, 33);
@@ -76,7 +78,7 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(259, 203);
+            this.comboBox1.Location = new System.Drawing.Point(258, 203);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(616, 33);
@@ -86,7 +88,7 @@
             // 
             this.cbxSensor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSensor.FormattingEnabled = true;
-            this.cbxSensor.Location = new System.Drawing.Point(259, 164);
+            this.cbxSensor.Location = new System.Drawing.Point(258, 158);
             this.cbxSensor.Margin = new System.Windows.Forms.Padding(6);
             this.cbxSensor.Name = "cbxSensor";
             this.cbxSensor.Size = new System.Drawing.Size(616, 33);
@@ -95,7 +97,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(68, 247);
+            this.label7.Location = new System.Drawing.Point(67, 251);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 25);
             this.label7.TabIndex = 33;
@@ -104,7 +106,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(68, 288);
+            this.label6.Location = new System.Drawing.Point(68, 347);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 25);
             this.label6.TabIndex = 32;
@@ -170,7 +172,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 332);
+            this.label3.Location = new System.Drawing.Point(68, 391);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 25);
             this.label3.TabIndex = 40;
@@ -179,7 +181,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(258, 332);
+            this.radioButton1.Location = new System.Drawing.Point(258, 391);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(81, 29);
             this.radioButton1.TabIndex = 41;
@@ -190,7 +192,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(429, 332);
+            this.radioButton2.Location = new System.Drawing.Point(429, 391);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(70, 29);
             this.radioButton2.TabIndex = 42;
@@ -200,16 +202,37 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(258, 287);
+            this.numericUpDown1.Location = new System.Drawing.Point(258, 346);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 31);
             this.numericUpDown1.TabIndex = 43;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(258, 293);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(6);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(616, 33);
+            this.comboBox3.TabIndex = 45;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(67, 296);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 25);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "Route";
             // 
             // FormAddFlight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1119, 710);
+            this.ClientSize = new System.Drawing.Size(1008, 674);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -254,5 +277,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label8;
     }
 }

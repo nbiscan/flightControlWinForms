@@ -64,7 +64,7 @@ namespace FlightControlModel.Repos
             List<Pilot> allPilots = new List<Pilot>();
 
             _comm.CommandText = "SELECT * " +
-                                "FROM Pilot p ";
+                                "FROM Pilot ";
 
             _conn.Open();
 

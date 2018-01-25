@@ -53,11 +53,6 @@
             this.addPassengerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removePassegerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editPassengerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewPlanesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addPlaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -274,42 +269,6 @@
             this.editPassengerToolStripMenuItem.Text = "Edit Passenger";
             this.editPassengerToolStripMenuItem.Click += new System.EventHandler(this.editPassengerToolStripMenuItem_Click);
             // 
-            // employeeToolStripMenuItem
-            // 
-            this.employeeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewEmployeesToolStripMenuItem,
-            this.addEmployeeToolStripMenuItem,
-            this.removeEmployeeToolStripMenuItem,
-            this.editEmployeeToolStripMenuItem});
-            this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(142, 38);
-            this.employeeToolStripMenuItem.Text = "Employees";
-            // 
-            // viewEmployeesToolStripMenuItem
-            // 
-            this.viewEmployeesToolStripMenuItem.Name = "viewEmployeesToolStripMenuItem";
-            this.viewEmployeesToolStripMenuItem.Size = new System.Drawing.Size(313, 38);
-            this.viewEmployeesToolStripMenuItem.Text = "View Employees";
-            this.viewEmployeesToolStripMenuItem.Click += new System.EventHandler(this.viewEmployeesToolStripMenuItem_Click);
-            // 
-            // addEmployeeToolStripMenuItem
-            // 
-            this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(313, 38);
-            this.addEmployeeToolStripMenuItem.Text = "Add Employee";
-            // 
-            // removeEmployeeToolStripMenuItem
-            // 
-            this.removeEmployeeToolStripMenuItem.Name = "removeEmployeeToolStripMenuItem";
-            this.removeEmployeeToolStripMenuItem.Size = new System.Drawing.Size(313, 38);
-            this.removeEmployeeToolStripMenuItem.Text = "Remove Employee";
-            // 
-            // editEmployeeToolStripMenuItem
-            // 
-            this.editEmployeeToolStripMenuItem.Name = "editEmployeeToolStripMenuItem";
-            this.editEmployeeToolStripMenuItem.Size = new System.Drawing.Size(313, 38);
-            this.editEmployeeToolStripMenuItem.Text = "Edit Employee";
-            // 
             // planeToolStripMenuItem
             // 
             this.planeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -324,28 +283,28 @@
             // viewPlanesToolStripMenuItem
             // 
             this.viewPlanesToolStripMenuItem.Name = "viewPlanesToolStripMenuItem";
-            this.viewPlanesToolStripMenuItem.Size = new System.Drawing.Size(266, 38);
+            this.viewPlanesToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
             this.viewPlanesToolStripMenuItem.Text = "View Planes";
             this.viewPlanesToolStripMenuItem.Click += new System.EventHandler(this.viewPlanesToolStripMenuItem_Click);
             // 
             // addPlaneToolStripMenuItem
             // 
             this.addPlaneToolStripMenuItem.Name = "addPlaneToolStripMenuItem";
-            this.addPlaneToolStripMenuItem.Size = new System.Drawing.Size(266, 38);
+            this.addPlaneToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
             this.addPlaneToolStripMenuItem.Text = "Add Plane";
             this.addPlaneToolStripMenuItem.Click += new System.EventHandler(this.addPlaneToolStripMenuItem_Click);
             // 
             // removePlaneToolStripMenuItem
             // 
             this.removePlaneToolStripMenuItem.Name = "removePlaneToolStripMenuItem";
-            this.removePlaneToolStripMenuItem.Size = new System.Drawing.Size(266, 38);
+            this.removePlaneToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
             this.removePlaneToolStripMenuItem.Text = "Remove Plane";
             this.removePlaneToolStripMenuItem.Click += new System.EventHandler(this.removePlaneToolStripMenuItem_Click);
             // 
             // editPlaneToolStripMenuItem
             // 
             this.editPlaneToolStripMenuItem.Name = "editPlaneToolStripMenuItem";
-            this.editPlaneToolStripMenuItem.Size = new System.Drawing.Size(266, 38);
+            this.editPlaneToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
             this.editPlaneToolStripMenuItem.Text = "Edit Plane";
             this.editPlaneToolStripMenuItem.Click += new System.EventHandler(this.editPlaneToolStripMenuItem_Click);
             // 
@@ -442,7 +401,6 @@
             this.pilotsToolStripMenuItem,
             this.routesToolStripMenuItem,
             this.passengerToolStripMenuItem,
-            this.employeeToolStripMenuItem,
             this.planeToolStripMenuItem,
             this.airportToolStripMenuItem,
             this.ticketToolStripMenuItem,
@@ -496,11 +454,6 @@
         private System.Windows.Forms.ToolStripMenuItem addPassengerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removePassegerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editPassengerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewEmployeesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeEmployeeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewPlanesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addPlaneToolStripMenuItem;
