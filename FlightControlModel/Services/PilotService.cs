@@ -18,19 +18,21 @@ namespace FlightControlModel.Services
             return _pilotRepository.GetAll();
         }
 
-        public Pilot Get(int unid)
+        public Pilot Get(int id)
         {
-            return _pilotRepository.Get(unid);
+            return _pilotRepository.Get(id);
         }
 
         public int Insert(Pilot p)
         {
             return _pilotRepository.Insert(p);
         }
-        //public bool Update(Pilot p)
-        //{
-        //    return _pilotRepository.Update(p);
-        //}
+
+        public bool Update(int id,Pilot p)
+        {
+            return _pilotRepository.Update(id,p);
+        }
+
         public bool Delete(int unid)
         {
             return _pilotRepository.Delete(unid);

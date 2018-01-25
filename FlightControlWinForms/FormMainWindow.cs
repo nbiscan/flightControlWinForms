@@ -73,5 +73,80 @@ namespace FlightControlWinForms
         {
             _controller.ViewPilots();
         }
+
+        private void addPilotToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.AddPilots();
+        }
+
+        private void removePilotToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.RemovePilots();
+        }
+
+        private void editPilotToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.EditPilots();
+        }
+
+        private void viewRoutesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void viewCountriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.ViewCountries();
+        }
+
+        private void addCountryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.AddCountries();
+        }
+
+        private void removeCountryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.RemoveCountries();
+        }
+
+        private void editCountryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.EditCountries();
+        }
+
+        private void viewPlanesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.ViewPlanes();
+        }
+
+        private void addPlaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.AddPlanes();
+        }
+
+        private void removePlaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.RemovePlanes();
+        }
+
+        private void editPlaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.EditPlanes();
+        }
+
+        private void addAirportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.AddAirports();
+        }
+
+        private void removeAirportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.RemoveAirports();
+        }
+
+        private void editAirportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.EditAirports();
+        }
     }
 }

@@ -16,9 +16,15 @@ namespace FlightControlWinForms
             InitializeComponent();
 
 
-            BindingSource bindingSource1 = new BindingSource();
-            bindingSource1.DataSource = Program.MyConnection.Pilot.Get(1);
+            //BindingSource bindingSource1 = new BindingSource();
+            //bindingSource1.DataSource = Program.MyConnection.Pilot.GetAll();
+
+            listView1.Items.Add("bla");
         }
 
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

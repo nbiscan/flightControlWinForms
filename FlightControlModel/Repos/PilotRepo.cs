@@ -130,14 +130,42 @@ namespace FlightControlModel.Repos
                 _conn.Close();
             }
         }
-        //public bool Update(int id, Pilot a)
-        //{
+        public bool Update(int id, Pilot p)
+        {
+            _comm.CommandText = "UPDATE Pilot " +
+                                "SET Id = @id, FirstName = @firstname, LastName = @lastname, BirthDay = @birthday " +
+                                "WHERE Id = @id ";
 
-        //}
+            _comm.AddParameter("@id", p.Id);
+            _comm.AddParameter("@firstname", p.FirstName);
+            _comm.AddParameter("@lastname", p.LastName);
+            _comm.AddParameter("@birthday", p.BirthDay);
+
+            _conn.Open();
+
+            try
+            {
+                _comm.ExecuteNonQuery();
+
+                _comm.Parameters.Clear();
+                _conn.Close();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                _comm.Parameters.Clear();
+                _conn.Close();
+            }
+        }
         public bool Delete(int id)
         {
             _comm.CommandText = "DELETE FROM Pilot " +
-                                           "WHERE Pilot.Id = @id;";
+                                "WHERE Pilot.Id = @id;";
 
             _comm.AddParameter("@id", id);
 
