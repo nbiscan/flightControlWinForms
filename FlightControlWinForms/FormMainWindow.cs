@@ -91,7 +91,7 @@ namespace FlightControlWinForms
 
         private void viewRoutesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            _controller.ViewRoutes();
         }
 
         private void viewCountriesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -147,6 +147,46 @@ namespace FlightControlWinForms
         private void editAirportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _controller.EditAirports();
+        }
+
+        private void addRouteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.AddRoutes();
+        }
+
+        private void removeRouteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.RemoveRoutes();
+        }
+
+        private void editRouteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.EditRoutes();
+        }
+
+        private void viewPassengersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.ViewPassengers();
+        }
+
+        private void addPassengerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.AddPassengers();
+        }
+
+        private void removePassegerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.RemovePassengers();
+        }
+
+        private void editPassengerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.EditPassengers();
+        }
+
+        private void viewEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

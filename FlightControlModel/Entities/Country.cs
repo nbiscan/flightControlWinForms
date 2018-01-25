@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+//using Iesi.Collections.Generic;
 
 namespace FlightControlApi.Models
 {
     public class Country
     {
-        public   Int64 Id { get; set; }
-        public   string iso { get; set; }
-        public   string name { get; set; }
-        public   string printable_name { get; set; }
-        public   string iso3 { get; set; }
-        public   int numcode { get; set; }
-       
+        public virtual Int64 Id { get; set; }
+        public virtual string iso { get; set; }
+        public virtual string name { get; set; }
+        public virtual string printable_name { get; set; }
+        public virtual string iso3 { get; set; }
+        public virtual int numcode { get; set; }
+       // public virtual ISet<Airport> airports { get; set; }
+     
     }
 }

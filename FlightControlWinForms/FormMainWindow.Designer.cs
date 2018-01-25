@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.flightsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addFlightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addFlightToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,8 +50,14 @@
             this.editRouteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.passengerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewPassengersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addPassengerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removePassegerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editPassengerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewPlanesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addPlaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,28 +74,9 @@
             this.addCountryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeCountryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editCountryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.flightsToolStripMenuItem,
-            this.passengersToolStripMenuItem,
-            this.pilotsToolStripMenuItem,
-            this.routesToolStripMenuItem,
-            this.passengerToolStripMenuItem,
-            this.employeeToolStripMenuItem,
-            this.planeToolStripMenuItem,
-            this.airportToolStripMenuItem,
-            this.ticketToolStripMenuItem,
-            this.countriesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1385, 42);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // flightsToolStripMenuItem
             // 
@@ -185,28 +171,28 @@
             // viewPilotsToolStripMenuItem
             // 
             this.viewPilotsToolStripMenuItem.Name = "viewPilotsToolStripMenuItem";
-            this.viewPilotsToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.viewPilotsToolStripMenuItem.Size = new System.Drawing.Size(255, 38);
             this.viewPilotsToolStripMenuItem.Text = "View Pilots";
             this.viewPilotsToolStripMenuItem.Click += new System.EventHandler(this.viewPilotsToolStripMenuItem_Click);
             // 
             // addPilotToolStripMenuItem
             // 
             this.addPilotToolStripMenuItem.Name = "addPilotToolStripMenuItem";
-            this.addPilotToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.addPilotToolStripMenuItem.Size = new System.Drawing.Size(255, 38);
             this.addPilotToolStripMenuItem.Text = "Add Pilot";
             this.addPilotToolStripMenuItem.Click += new System.EventHandler(this.addPilotToolStripMenuItem_Click);
             // 
             // removePilotToolStripMenuItem
             // 
             this.removePilotToolStripMenuItem.Name = "removePilotToolStripMenuItem";
-            this.removePilotToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.removePilotToolStripMenuItem.Size = new System.Drawing.Size(255, 38);
             this.removePilotToolStripMenuItem.Text = "Remove Pilot";
             this.removePilotToolStripMenuItem.Click += new System.EventHandler(this.removePilotToolStripMenuItem_Click);
             // 
             // editPilotToolStripMenuItem
             // 
             this.editPilotToolStripMenuItem.Name = "editPilotToolStripMenuItem";
-            this.editPilotToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.editPilotToolStripMenuItem.Size = new System.Drawing.Size(255, 38);
             this.editPilotToolStripMenuItem.Text = "Edit Pilot";
             this.editPilotToolStripMenuItem.Click += new System.EventHandler(this.editPilotToolStripMenuItem_Click);
             // 
@@ -233,23 +219,29 @@
             this.addRouteToolStripMenuItem.Name = "addRouteToolStripMenuItem";
             this.addRouteToolStripMenuItem.Size = new System.Drawing.Size(270, 38);
             this.addRouteToolStripMenuItem.Text = "Add Route";
+            this.addRouteToolStripMenuItem.Click += new System.EventHandler(this.addRouteToolStripMenuItem_Click);
             // 
             // removeRouteToolStripMenuItem
             // 
             this.removeRouteToolStripMenuItem.Name = "removeRouteToolStripMenuItem";
             this.removeRouteToolStripMenuItem.Size = new System.Drawing.Size(270, 38);
             this.removeRouteToolStripMenuItem.Text = "Remove Route";
+            this.removeRouteToolStripMenuItem.Click += new System.EventHandler(this.removeRouteToolStripMenuItem_Click);
             // 
             // editRouteToolStripMenuItem
             // 
             this.editRouteToolStripMenuItem.Name = "editRouteToolStripMenuItem";
             this.editRouteToolStripMenuItem.Size = new System.Drawing.Size(270, 38);
             this.editRouteToolStripMenuItem.Text = "Edit Route";
+            this.editRouteToolStripMenuItem.Click += new System.EventHandler(this.editRouteToolStripMenuItem_Click);
             // 
             // passengerToolStripMenuItem
             // 
             this.passengerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewPassengersToolStripMenuItem});
+            this.viewPassengersToolStripMenuItem,
+            this.addPassengerToolStripMenuItem,
+            this.removePassegerToolStripMenuItem,
+            this.editPassengerToolStripMenuItem});
             this.passengerToolStripMenuItem.Name = "passengerToolStripMenuItem";
             this.passengerToolStripMenuItem.Size = new System.Drawing.Size(143, 38);
             this.passengerToolStripMenuItem.Text = "Passengers";
@@ -257,13 +249,38 @@
             // viewPassengersToolStripMenuItem
             // 
             this.viewPassengersToolStripMenuItem.Name = "viewPassengersToolStripMenuItem";
-            this.viewPassengersToolStripMenuItem.Size = new System.Drawing.Size(289, 38);
+            this.viewPassengersToolStripMenuItem.Size = new System.Drawing.Size(300, 38);
             this.viewPassengersToolStripMenuItem.Text = "View Passengers";
+            this.viewPassengersToolStripMenuItem.Click += new System.EventHandler(this.viewPassengersToolStripMenuItem_Click);
+            // 
+            // addPassengerToolStripMenuItem
+            // 
+            this.addPassengerToolStripMenuItem.Name = "addPassengerToolStripMenuItem";
+            this.addPassengerToolStripMenuItem.Size = new System.Drawing.Size(300, 38);
+            this.addPassengerToolStripMenuItem.Text = "Add Passenger";
+            this.addPassengerToolStripMenuItem.Click += new System.EventHandler(this.addPassengerToolStripMenuItem_Click);
+            // 
+            // removePassegerToolStripMenuItem
+            // 
+            this.removePassegerToolStripMenuItem.Name = "removePassegerToolStripMenuItem";
+            this.removePassegerToolStripMenuItem.Size = new System.Drawing.Size(300, 38);
+            this.removePassegerToolStripMenuItem.Text = "Remove Passeger";
+            this.removePassegerToolStripMenuItem.Click += new System.EventHandler(this.removePassegerToolStripMenuItem_Click);
+            // 
+            // editPassengerToolStripMenuItem
+            // 
+            this.editPassengerToolStripMenuItem.Name = "editPassengerToolStripMenuItem";
+            this.editPassengerToolStripMenuItem.Size = new System.Drawing.Size(300, 38);
+            this.editPassengerToolStripMenuItem.Text = "Edit Passenger";
+            this.editPassengerToolStripMenuItem.Click += new System.EventHandler(this.editPassengerToolStripMenuItem_Click);
             // 
             // employeeToolStripMenuItem
             // 
             this.employeeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewEmployeesToolStripMenuItem});
+            this.viewEmployeesToolStripMenuItem,
+            this.addEmployeeToolStripMenuItem,
+            this.removeEmployeeToolStripMenuItem,
+            this.editEmployeeToolStripMenuItem});
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
             this.employeeToolStripMenuItem.Size = new System.Drawing.Size(142, 38);
             this.employeeToolStripMenuItem.Text = "Employees";
@@ -271,8 +288,27 @@
             // viewEmployeesToolStripMenuItem
             // 
             this.viewEmployeesToolStripMenuItem.Name = "viewEmployeesToolStripMenuItem";
-            this.viewEmployeesToolStripMenuItem.Size = new System.Drawing.Size(288, 38);
+            this.viewEmployeesToolStripMenuItem.Size = new System.Drawing.Size(313, 38);
             this.viewEmployeesToolStripMenuItem.Text = "View Employees";
+            this.viewEmployeesToolStripMenuItem.Click += new System.EventHandler(this.viewEmployeesToolStripMenuItem_Click);
+            // 
+            // addEmployeeToolStripMenuItem
+            // 
+            this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(313, 38);
+            this.addEmployeeToolStripMenuItem.Text = "Add Employee";
+            // 
+            // removeEmployeeToolStripMenuItem
+            // 
+            this.removeEmployeeToolStripMenuItem.Name = "removeEmployeeToolStripMenuItem";
+            this.removeEmployeeToolStripMenuItem.Size = new System.Drawing.Size(313, 38);
+            this.removeEmployeeToolStripMenuItem.Text = "Remove Employee";
+            // 
+            // editEmployeeToolStripMenuItem
+            // 
+            this.editEmployeeToolStripMenuItem.Name = "editEmployeeToolStripMenuItem";
+            this.editEmployeeToolStripMenuItem.Size = new System.Drawing.Size(313, 38);
+            this.editEmployeeToolStripMenuItem.Text = "Edit Employee";
             // 
             // planeToolStripMenuItem
             // 
@@ -288,28 +324,28 @@
             // viewPlanesToolStripMenuItem
             // 
             this.viewPlanesToolStripMenuItem.Name = "viewPlanesToolStripMenuItem";
-            this.viewPlanesToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.viewPlanesToolStripMenuItem.Size = new System.Drawing.Size(266, 38);
             this.viewPlanesToolStripMenuItem.Text = "View Planes";
             this.viewPlanesToolStripMenuItem.Click += new System.EventHandler(this.viewPlanesToolStripMenuItem_Click);
             // 
             // addPlaneToolStripMenuItem
             // 
             this.addPlaneToolStripMenuItem.Name = "addPlaneToolStripMenuItem";
-            this.addPlaneToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.addPlaneToolStripMenuItem.Size = new System.Drawing.Size(266, 38);
             this.addPlaneToolStripMenuItem.Text = "Add Plane";
             this.addPlaneToolStripMenuItem.Click += new System.EventHandler(this.addPlaneToolStripMenuItem_Click);
             // 
             // removePlaneToolStripMenuItem
             // 
             this.removePlaneToolStripMenuItem.Name = "removePlaneToolStripMenuItem";
-            this.removePlaneToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.removePlaneToolStripMenuItem.Size = new System.Drawing.Size(266, 38);
             this.removePlaneToolStripMenuItem.Text = "Remove Plane";
             this.removePlaneToolStripMenuItem.Click += new System.EventHandler(this.removePlaneToolStripMenuItem_Click);
             // 
             // editPlaneToolStripMenuItem
             // 
             this.editPlaneToolStripMenuItem.Name = "editPlaneToolStripMenuItem";
-            this.editPlaneToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.editPlaneToolStripMenuItem.Size = new System.Drawing.Size(266, 38);
             this.editPlaneToolStripMenuItem.Text = "Edit Plane";
             this.editPlaneToolStripMenuItem.Click += new System.EventHandler(this.editPlaneToolStripMenuItem_Click);
             // 
@@ -397,6 +433,26 @@
             this.editCountryToolStripMenuItem.Text = "Edit Country";
             this.editCountryToolStripMenuItem.Click += new System.EventHandler(this.editCountryToolStripMenuItem_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.flightsToolStripMenuItem,
+            this.passengersToolStripMenuItem,
+            this.pilotsToolStripMenuItem,
+            this.routesToolStripMenuItem,
+            this.passengerToolStripMenuItem,
+            this.employeeToolStripMenuItem,
+            this.planeToolStripMenuItem,
+            this.airportToolStripMenuItem,
+            this.ticketToolStripMenuItem,
+            this.countriesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1385, 42);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // FormMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -415,12 +471,12 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem flightsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem passengersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addFlightToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addFlightToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem removeFlightToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editFlightToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem passengersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewStoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addStoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeStoreToolStripMenuItem;
@@ -437,25 +493,31 @@
         private System.Windows.Forms.ToolStripMenuItem editRouteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem passengerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewPassengersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addPassengerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removePassegerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editPassengerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewEmployeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem airportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeFlightToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewPlanesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addPlaneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removePlaneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editPlaneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem airportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewAirportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addAirportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeAirportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editAirportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem countriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewCountriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCountryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeCountryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editCountryToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 
