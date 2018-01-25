@@ -27,6 +27,12 @@ namespace FlightControlWinForms
             faf.ShowDialog();
         }
 
+        public void AddPassengers()
+        {
+            FormAddPassenger fap = new FormAddPassenger();
+            fap.ShowDialog();
+        }
+
         public void AddPilots()
         {
             FormAddPilot fap = new FormAddPilot();
@@ -37,6 +43,18 @@ namespace FlightControlWinForms
         {
             FormAddPlane fap = new FormAddPlane();
             fap.ShowDialog();
+        }
+
+        public void AddRoutes()
+        {
+            FormAddRoute far = new FormAddRoute();
+            far.ShowDialog();
+        }
+
+        public void AddSeats()
+        {
+            FormAddSeat fas = new FormAddSeat();
+            fas.ShowDialog();
         }
 
         public void AddStores()
@@ -63,6 +81,12 @@ namespace FlightControlWinForms
             fef.ShowDialog();
         }
 
+        public void EditPassengers()
+        {
+            FormEditPassenger fep = new FormEditPassenger();
+            fep.ShowDialog();
+        }
+
         public void EditPilots()
         {
             FormEditPilot fep = new FormEditPilot();
@@ -73,6 +97,18 @@ namespace FlightControlWinForms
         {
             FormEditPlane fep = new FormEditPlane();
             fep.ShowDialog();
+        }
+
+        public void EditRoutes()
+        {
+            FormEditRoute fer = new FormEditRoute();
+            fer.ShowDialog();
+        }
+
+        public void EditSeats()
+        {
+            FormEditSeat fes = new FormEditSeat();
+            fes.ShowDialog();
         }
 
         public void EditStores()
@@ -99,6 +135,12 @@ namespace FlightControlWinForms
             fef.ShowDialog();
         }
 
+        public void RemovePassengers()
+        {
+            FormEditPassenger fep = new FormEditPassenger();
+            fep.ShowDialog();
+        }
+
         public void RemovePilots()
         {
             FormEditPilot fep = new FormEditPilot();
@@ -109,6 +151,18 @@ namespace FlightControlWinForms
         {
             FormEditPlane fep = new FormEditPlane();
             fep.ShowDialog();
+        }
+
+        public void RemoveRoutes()
+        {
+            FormEditRoute fer = new FormEditRoute();
+            fer.ShowDialog();
+        }
+
+        public void RemoveSeats()
+        {
+            FormEditSeat fes = new FormEditSeat();
+            fes.ShowDialog();
         }
 
         public void RemoveStores()
@@ -135,6 +189,12 @@ namespace FlightControlWinForms
             fef.ShowDialog();
         }
 
+        public void ViewPassengers()
+        {
+            FormEditPassenger fep = new FormEditPassenger();
+            fep.ShowDialog();
+        }
+
         public void ViewPilots()
         {
             FormEditPilot fep = new FormEditPilot();
@@ -146,6 +206,20 @@ namespace FlightControlWinForms
             FormEditPlane fep = new FormEditPlane();
             fep.ShowDialog();
         }
+
+        public void ViewRoutes()
+        {
+            FormEditRoute fer = new FormEditRoute();
+            fer.ShowDialog();
+
+        }
+
+        public void ViewSeats()
+        {
+            FormEditSeat fes = new FormEditSeat();
+            fes.ShowDialog();
+        }
+
 
         public void ViewStores()
         {

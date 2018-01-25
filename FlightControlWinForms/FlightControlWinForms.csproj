@@ -60,6 +60,12 @@
     <Compile Include="FormAddFlight.Designer.cs">
       <DependentUpon>FormAddFlight.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddPassenger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddPassenger.Designer.cs">
+      <DependentUpon>FormAddPassenger.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddPilot.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,18 @@
     </Compile>
     <Compile Include="FormAddPlane.Designer.cs">
       <DependentUpon>FormAddPlane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddRoute.Designer.cs">
+      <DependentUpon>FormAddRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddSeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddSeat.Designer.cs">
+      <DependentUpon>FormAddSeat.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAddStore.cs">
       <SubType>Form</SubType>
@@ -90,6 +108,12 @@
     <Compile Include="FormEditCountry.Designer.cs">
       <DependentUpon>FormEditCountry.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditPassenger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditPassenger.Designer.cs">
+      <DependentUpon>FormEditPassenger.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditPilot.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +125,18 @@
     </Compile>
     <Compile Include="FormEditPlane.Designer.cs">
       <DependentUpon>FormEditPlane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditRoute.Designer.cs">
+      <DependentUpon>FormEditRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditSeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditSeat.Designer.cs">
+      <DependentUpon>FormEditSeat.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditStore.cs">
       <SubType>Form</SubType>
