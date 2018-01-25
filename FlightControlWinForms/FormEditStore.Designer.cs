@@ -36,6 +36,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // button3
@@ -72,7 +73,8 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader5});
             this.listView1.Location = new System.Drawing.Point(67, 29);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(906, 415);
@@ -87,18 +89,23 @@
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Address";
+            this.columnHeader2.Text = "Name";
             this.columnHeader2.Width = 150;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "City";
+            this.columnHeader3.Text = "Address";
             this.columnHeader3.Width = 150;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Country";
+            this.columnHeader4.Text = "Zipcode";
             this.columnHeader4.Width = 150;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Country";
+            this.columnHeader5.Width = 150;
             // 
             // FormEditStore
             // 
@@ -125,5 +132,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

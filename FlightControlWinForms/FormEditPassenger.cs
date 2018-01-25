@@ -15,5 +15,10 @@ namespace FlightControlWinForms
         {
             InitializeComponent();
         }
+
+        private void FormEditPassenger_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

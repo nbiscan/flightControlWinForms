@@ -190,8 +190,23 @@
     <EmbeddedResource Include="FormEditAirport.resx">
       <DependentUpon>FormEditAirport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditCountry.resx">
+      <DependentUpon>FormEditCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditPassenger.resx">
+      <DependentUpon>FormEditPassenger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditPilot.resx">
       <DependentUpon>FormEditPilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditPlane.resx">
+      <DependentUpon>FormEditPlane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditRoute.resx">
+      <DependentUpon>FormEditRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditSeat.resx">
+      <DependentUpon>FormEditSeat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditStore.resx">
       <DependentUpon>FormEditStore.cs</DependentUpon>
