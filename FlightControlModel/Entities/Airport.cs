@@ -1,9 +1,6 @@
 ﻿using System;
-
 using System.Linq;
 using System.Web;
-//using NHibernate.Spatial.Type;
-//using Iesi.Collections.Generic;
 
 
 namespace FlightControlApi.Models

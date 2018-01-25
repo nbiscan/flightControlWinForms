@@ -12,9 +12,11 @@ namespace FlightControlModel
         protected IDbCommand _command;
 
         protected PilotService _pilot;
+        protected AirportService _airport;
        
 
         public PilotService Pilot { get { return _pilot; } }
+        public AirportService Airport { get { return _airport; } }
     }
 
     public class MSSQLDatabase : DB
@@ -26,6 +28,7 @@ namespace FlightControlModel
             _command = new SqlCommand();
 
             _pilot = new PilotService(new PilotRepo(_connection, _command));
+            _airport = new AirportService(new AirportRepo(_connection, _command));
         }
     }
 }

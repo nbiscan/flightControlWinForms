@@ -69,6 +69,7 @@
     <Compile Include="Repos\AirportRepo.cs" />
     <Compile Include="Repos\CRUD.cs" />
     <Compile Include="Repos\PilotRepo.cs" />
+    <Compile Include="Services\AirportService.cs" />
     <Compile Include="Services\PilotService.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

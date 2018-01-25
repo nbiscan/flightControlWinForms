@@ -19,7 +19,7 @@ namespace FlightControlModel.Repos
 
             _comm.CommandText = "SELECT * " +
                                 "FROM Pilot p " +
-                                "WHERE p.ID = @id;";
+                                "WHERE p.Id = @id;";
 
             _comm.AddParameter("@id", id);
 
@@ -36,8 +36,8 @@ namespace FlightControlModel.Repos
                         Id = Convert.ToInt32(rdr["Id"]),
                         FirstName = Convert.ToString(rdr["FirstName"]),
                         LastName = Convert.ToString(rdr["LastName"]),
-                        BirthDay = Convert.ToDateTime(rdr["BirthDay"]),
-
+                        BirthDay = Convert.ToDateTime(rdr["BirthDay"])
+                   
                     };
 
                 }
@@ -74,7 +74,7 @@ namespace FlightControlModel.Repos
                 {
                     while (rdr.Read())
                     {
-                        allPilotsIDs.Add(Convert.ToInt32(rdr["ID"]));
+                        allPilotsIDs.Add(Convert.ToInt32(rdr["Id"]));
                     }
                 }
 

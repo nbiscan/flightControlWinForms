@@ -14,6 +14,24 @@ namespace FlightControlWinForms
         public FormEditAirport()
         {
             InitializeComponent();
+
+            FlightControlApi.Models.Airport[] pilots = Program.MyConnection.Airport.GetAll().ToArray();
+
+            string[] tmpAirport = new string[5];
+            ListViewItem lvi;
+
+            foreach (FlightControlApi.Models.Airport p in pilots)
+            {
+                tmpAirport[0] = p.Id.ToString();
+                tmpAirport[1] = p.Name;
+                tmpAirport[2] = p.Address;
+                tmpAirport[3] = p.ZipCode;
+                tmpAirport[4] = p.CountryId.ToString();
+
+                lvi = new ListViewItem(tmpAirport);
+
+                listView1.Items.Add(lvi);
+            }
         }
     }
 }
