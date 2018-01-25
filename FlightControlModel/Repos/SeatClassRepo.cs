@@ -7,18 +7,18 @@ using System.Text;
 
 namespace FlightControlModel.Repos
 {
-    public class CountryRepo:CRUD
+    public class SeatClassRepo : CRUD
     {
-        public CountryRepo(IDbConnection conn, IDbCommand comm) : base(conn, comm)
+        public SeatClassRepo(IDbConnection conn, IDbCommand comm) : base(conn, comm)
         {
         }
 
-        public Country Get(int id)
+        public SeatClass Get(int id)
         {
-            Country a;
+            SeatClass a;
 
             _comm.CommandText = "SELECT * " +
-                                "FROM country a " +
+                                "FROM SeatClass a " +
                                 "WHERE a.Id = @id;";
 
             _comm.AddParameter("@id", id);
@@ -31,14 +31,12 @@ namespace FlightControlModel.Repos
                 {
                     rdr.Read();
 
-                    a = new Country()
+                    a = new SeatClass()
                     {
                         Id = Convert.ToInt32(rdr["id"]),
-                        iso = Convert.ToString(rdr["iso"]),
-                        name = Convert.ToString(rdr["name"]),
-                        printable_name = Convert.ToString(rdr["printable_name"]),
-                        iso3 = Convert.ToString(rdr["iso3"]),
-                        numcode = Convert.ToInt32(rdr["numcode"])
+                        Name = Convert.ToString(rdr["Name"]),
+                        PriceMultipler = Convert.ToInt32(rdr["PriceMultipler"])
+                        
 
                     };
 
@@ -60,13 +58,13 @@ namespace FlightControlModel.Repos
 
 
         }
-        public List<Country> GetAll()
+        public List<SeatClass> GetAll()
         {
-            List<int> allCountrysIDs = new List<int>();
-            List<Country> allCountrys = new List<Country>();
+            List<int> allSeatClasssIDs = new List<int>();
+            List<SeatClass> allSeatClasss = new List<SeatClass>();
 
             _comm.CommandText = "SELECT * " +
-                                "FROM country ";
+                                "FROM SeatClass ";
 
             _conn.Open();
 
@@ -76,18 +74,18 @@ namespace FlightControlModel.Repos
                 {
                     while (rdr.Read())
                     {
-                        allCountrysIDs.Add(Convert.ToInt32(rdr["Id"]));
+                        allSeatClasssIDs.Add(Convert.ToInt32(rdr["Id"]));
                     }
                 }
 
                 _conn.Close();
 
-                foreach (int id in allCountrysIDs)
+                foreach (int id in allSeatClasssIDs)
                 {
-                    allCountrys.Add(this.Get(id));
+                    allSeatClasss.Add(this.Get(id));
                 }
 
-                return allCountrys;
+                return allSeatClasss;
             }
             catch (Exception ex)
             {
@@ -98,6 +96,6 @@ namespace FlightControlModel.Repos
                 _conn.Close();
             }
         }
-        
+
     }
 }

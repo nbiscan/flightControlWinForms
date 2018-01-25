@@ -19,6 +19,8 @@ namespace FlightControlModel
         protected PlaneService _plane;
         protected RouteService _route;
         protected SeatService _seat;
+        protected SeatClassService _seatClass;
+        protected StoreService _store;
        
         public PilotService Pilot { get { return _pilot; } }
         public AirportService Airport { get { return _airport; } }
@@ -28,6 +30,9 @@ namespace FlightControlModel
         public PlaneService Plane { get { return _plane; } }
         public RouteService Route { get { return _route; } }
         public SeatService Seat { get { return _seat; } }
+        public SeatClassService SeatClass { get { return _seatClass; } }
+        public StoreService Store { get { return _store; } }
+
     }
 
     public class MSSQLDatabase : DB
