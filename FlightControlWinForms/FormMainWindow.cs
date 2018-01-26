@@ -221,24 +221,6 @@ namespace FlightControlWinForms
             _controller.EditTickets();
         }
 
-        private void viewTablesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _controller.ViewTables();
-        }
-
-        private void addTableToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _controller.AddTables();
-        }
-
-        private void removeTableToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _controller.RemoveTables();
-        }
-
-        private void editTableToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _controller.EditTables();
-        }
+       
     }
 }

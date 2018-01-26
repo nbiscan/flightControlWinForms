@@ -21,6 +21,7 @@ namespace FlightControlModel
         protected SeatService _seat;
         protected SeatClassService _seatClass;
         protected StoreService _store;
+        protected TicketService _ticket;
        
         public PilotService Pilot { get { return _pilot; } }
         public AirportService Airport { get { return _airport; } }
@@ -32,6 +33,7 @@ namespace FlightControlModel
         public SeatService Seat { get { return _seat; } }
         public SeatClassService SeatClass { get { return _seatClass; } }
         public StoreService Store { get { return _store; } }
+        public TicketService Ticket { get { return _ticket; } }
 
     }
 
@@ -53,6 +55,7 @@ namespace FlightControlModel
             _seat = new SeatService(new SeatRepo(_connection, _command));
             _seatClass = new SeatClassService(new SeatClassRepo(_connection, _command));
             _store = new StoreService(new StoreRepo(_connection, _command));
+            _ticket = new TicketService(new TicketRepo(_connection, _command));
 
         }
     }

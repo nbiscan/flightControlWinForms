@@ -80,6 +80,7 @@
     <Compile Include="Repos\SeatClassRepo.cs" />
     <Compile Include="Repos\SeatRepo.cs" />
     <Compile Include="Repos\StoreRepo.cs" />
+    <Compile Include="Repos\TicketRepo.cs" />
     <Compile Include="Services\AirportService.cs" />
     <Compile Include="Services\CountryService.cs" />
     <Compile Include="Services\FlightService.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Services\SeatClassService.cs" />
     <Compile Include="Services\SeatService.cs" />
     <Compile Include="Services\StoreService.cs" />
+    <Compile Include="Services\TicketService.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

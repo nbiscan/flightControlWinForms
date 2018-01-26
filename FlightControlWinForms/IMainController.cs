@@ -50,10 +50,7 @@ namespace FlightControlWinForms
         void RemoveStores();
         void EditStores();
 
-        void ViewTables();
-        void AddTables();
-        void RemoveTables();
-        void EditTables();
+       
 
         void ViewTickets();
         void AddTickets();

@@ -26,5 +26,5 @@ C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForm
 C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormEditRoute.resources
 C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormEditSeat.resources
 C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormEditSeatClass.resources
-C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormAddTable.resources
-C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormEditTable.resources
+C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormAddTicket.resources
+C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormEditTicket.resources

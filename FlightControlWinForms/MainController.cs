@@ -59,11 +59,7 @@ namespace FlightControlWinForms
             fas.ShowDialog();
         }
 
-        public void AddTables()
-        {
-            FormAddTable fat = new FormAddTable();
-            fat.ShowDialog();
-        }
+       
 
         public void AddTickets()
         {
@@ -125,11 +121,7 @@ namespace FlightControlWinForms
             fes.ShowDialog();
         }
 
-        public void EditTables()
-        {
-            FormEditTable fet = new FormEditTable();
-            fet.ShowDialog();
-        }
+       
 
         public void EditTickets()
         {
@@ -192,11 +184,7 @@ namespace FlightControlWinForms
             fes.ShowDialog();
         }
 
-        public void RemoveTables()
-        {
-            FormEditTable fet = new FormEditTable();
-            fet.ShowDialog();
-        }
+      
 
         public void RemoveTickets()
         {
@@ -265,11 +253,7 @@ namespace FlightControlWinForms
             fes.ShowDialog();
         }
 
-        public void ViewTables()
-        {
-            FormEditTable fet = new FormEditTable();
-            fet.ShowDialog();
-        }
+      
 
         public void ViewTickets()
         {
