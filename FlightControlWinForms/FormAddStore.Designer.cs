@@ -48,6 +48,7 @@
             this.button2.TabIndex = 118;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -57,6 +58,7 @@
             this.button1.TabIndex = 117;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -124,6 +126,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(616, 33);
             this.comboBox3.TabIndex = 120;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // FormAddStore
             // 

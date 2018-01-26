@@ -66,15 +66,23 @@
             this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.countriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewCountriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addCountryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeCountryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editCountryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.seatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewSeatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addSeatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeSeatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editSeatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seatClassesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewSeatClassesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewTicketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addTicketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeTicketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editTicketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +94,7 @@
             this.removeFlightToolStripMenuItem,
             this.editFlightToolStripMenuItem});
             this.flightsToolStripMenuItem.Name = "flightsToolStripMenuItem";
-            this.flightsToolStripMenuItem.Size = new System.Drawing.Size(97, 38);
+            this.flightsToolStripMenuItem.Size = new System.Drawing.Size(97, 36);
             this.flightsToolStripMenuItem.Text = "Flights";
             // 
             // addFlightToolStripMenuItem
@@ -125,7 +133,7 @@
             this.removeStoreToolStripMenuItem,
             this.editStoreToolStripMenuItem});
             this.passengersToolStripMenuItem.Name = "passengersToolStripMenuItem";
-            this.passengersToolStripMenuItem.Size = new System.Drawing.Size(92, 38);
+            this.passengersToolStripMenuItem.Size = new System.Drawing.Size(92, 36);
             this.passengersToolStripMenuItem.Text = "Stores";
             this.passengersToolStripMenuItem.Click += new System.EventHandler(this.passengersToolStripMenuItem_Click);
             // 
@@ -165,7 +173,7 @@
             this.removePilotToolStripMenuItem,
             this.editPilotToolStripMenuItem});
             this.pilotsToolStripMenuItem.Name = "pilotsToolStripMenuItem";
-            this.pilotsToolStripMenuItem.Size = new System.Drawing.Size(84, 38);
+            this.pilotsToolStripMenuItem.Size = new System.Drawing.Size(84, 36);
             this.pilotsToolStripMenuItem.Text = "Pilots";
             // 
             // viewPilotsToolStripMenuItem
@@ -204,7 +212,7 @@
             this.removeRouteToolStripMenuItem,
             this.editRouteToolStripMenuItem});
             this.routesToolStripMenuItem.Name = "routesToolStripMenuItem";
-            this.routesToolStripMenuItem.Size = new System.Drawing.Size(99, 38);
+            this.routesToolStripMenuItem.Size = new System.Drawing.Size(99, 36);
             this.routesToolStripMenuItem.Text = "Routes";
             // 
             // viewRoutesToolStripMenuItem
@@ -243,7 +251,7 @@
             this.removePassegerToolStripMenuItem,
             this.editPassengerToolStripMenuItem});
             this.passengerToolStripMenuItem.Name = "passengerToolStripMenuItem";
-            this.passengerToolStripMenuItem.Size = new System.Drawing.Size(143, 38);
+            this.passengerToolStripMenuItem.Size = new System.Drawing.Size(143, 36);
             this.passengerToolStripMenuItem.Text = "Passengers";
             // 
             // viewPassengersToolStripMenuItem
@@ -282,7 +290,7 @@
             this.removePlaneToolStripMenuItem,
             this.editPlaneToolStripMenuItem});
             this.planeToolStripMenuItem.Name = "planeToolStripMenuItem";
-            this.planeToolStripMenuItem.Size = new System.Drawing.Size(95, 38);
+            this.planeToolStripMenuItem.Size = new System.Drawing.Size(95, 36);
             this.planeToolStripMenuItem.Text = "Planes";
             // 
             // viewPlanesToolStripMenuItem
@@ -321,7 +329,7 @@
             this.removeAirportToolStripMenuItem,
             this.editAirportToolStripMenuItem});
             this.airportToolStripMenuItem.Name = "airportToolStripMenuItem";
-            this.airportToolStripMenuItem.Size = new System.Drawing.Size(110, 38);
+            this.airportToolStripMenuItem.Size = new System.Drawing.Size(110, 36);
             this.airportToolStripMenuItem.Text = "Airports";
             // 
             // viewAirportsToolStripMenuItem
@@ -354,6 +362,11 @@
             // 
             // ticketToolStripMenuItem
             // 
+            this.ticketToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewTicketsToolStripMenuItem,
+            this.addTicketToolStripMenuItem,
+            this.removeTicketToolStripMenuItem,
+            this.editTicketToolStripMenuItem});
             this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
             this.ticketToolStripMenuItem.Size = new System.Drawing.Size(100, 38);
             this.ticketToolStripMenuItem.Text = "Tickets";
@@ -361,41 +374,17 @@
             // countriesToolStripMenuItem
             // 
             this.countriesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewCountriesToolStripMenuItem,
-            this.addCountryToolStripMenuItem,
-            this.removeCountryToolStripMenuItem,
-            this.editCountryToolStripMenuItem});
+            this.viewCountriesToolStripMenuItem});
             this.countriesToolStripMenuItem.Name = "countriesToolStripMenuItem";
-            this.countriesToolStripMenuItem.Size = new System.Drawing.Size(129, 38);
+            this.countriesToolStripMenuItem.Size = new System.Drawing.Size(129, 36);
             this.countriesToolStripMenuItem.Text = "Countries";
             // 
             // viewCountriesToolStripMenuItem
             // 
             this.viewCountriesToolStripMenuItem.Name = "viewCountriesToolStripMenuItem";
-            this.viewCountriesToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
+            this.viewCountriesToolStripMenuItem.Size = new System.Drawing.Size(275, 38);
             this.viewCountriesToolStripMenuItem.Text = "View Countries";
             this.viewCountriesToolStripMenuItem.Click += new System.EventHandler(this.viewCountriesToolStripMenuItem_Click);
-            // 
-            // addCountryToolStripMenuItem
-            // 
-            this.addCountryToolStripMenuItem.Name = "addCountryToolStripMenuItem";
-            this.addCountryToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
-            this.addCountryToolStripMenuItem.Text = "Add Country";
-            this.addCountryToolStripMenuItem.Click += new System.EventHandler(this.addCountryToolStripMenuItem_Click);
-            // 
-            // removeCountryToolStripMenuItem
-            // 
-            this.removeCountryToolStripMenuItem.Name = "removeCountryToolStripMenuItem";
-            this.removeCountryToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
-            this.removeCountryToolStripMenuItem.Text = "Remove Country";
-            this.removeCountryToolStripMenuItem.Click += new System.EventHandler(this.removeCountryToolStripMenuItem_Click);
-            // 
-            // editCountryToolStripMenuItem
-            // 
-            this.editCountryToolStripMenuItem.Name = "editCountryToolStripMenuItem";
-            this.editCountryToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
-            this.editCountryToolStripMenuItem.Text = "Edit Country";
-            this.editCountryToolStripMenuItem.Click += new System.EventHandler(this.editCountryToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -410,10 +399,12 @@
             this.airportToolStripMenuItem,
             this.ticketToolStripMenuItem,
             this.countriesToolStripMenuItem,
-            this.seatsToolStripMenuItem});
+            this.seatsToolStripMenuItem,
+            this.seatClassesToolStripMenuItem,
+            this.tableToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1385, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(2532, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -425,44 +416,127 @@
             this.removeSeatToolStripMenuItem,
             this.editSeatToolStripMenuItem});
             this.seatsToolStripMenuItem.Name = "seatsToolStripMenuItem";
-            this.seatsToolStripMenuItem.Size = new System.Drawing.Size(83, 38);
+            this.seatsToolStripMenuItem.Size = new System.Drawing.Size(83, 36);
             this.seatsToolStripMenuItem.Text = "Seats";
             // 
             // viewSeatsToolStripMenuItem
             // 
             this.viewSeatsToolStripMenuItem.Name = "viewSeatsToolStripMenuItem";
-            this.viewSeatsToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.viewSeatsToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
             this.viewSeatsToolStripMenuItem.Text = "View Seats";
             this.viewSeatsToolStripMenuItem.Click += new System.EventHandler(this.viewSeatsToolStripMenuItem_Click);
             // 
             // addSeatToolStripMenuItem
             // 
             this.addSeatToolStripMenuItem.Name = "addSeatToolStripMenuItem";
-            this.addSeatToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.addSeatToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
             this.addSeatToolStripMenuItem.Text = "Add Seat";
             this.addSeatToolStripMenuItem.Click += new System.EventHandler(this.addSeatToolStripMenuItem_Click);
             // 
             // removeSeatToolStripMenuItem
             // 
             this.removeSeatToolStripMenuItem.Name = "removeSeatToolStripMenuItem";
-            this.removeSeatToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.removeSeatToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
             this.removeSeatToolStripMenuItem.Text = "Remove Seat";
             this.removeSeatToolStripMenuItem.Click += new System.EventHandler(this.removeSeatToolStripMenuItem_Click);
             // 
             // editSeatToolStripMenuItem
             // 
             this.editSeatToolStripMenuItem.Name = "editSeatToolStripMenuItem";
-            this.editSeatToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.editSeatToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
             this.editSeatToolStripMenuItem.Text = "Edit Seat";
             this.editSeatToolStripMenuItem.Click += new System.EventHandler(this.editSeatToolStripMenuItem_Click);
+            // 
+            // seatClassesToolStripMenuItem
+            // 
+            this.seatClassesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewSeatClassesToolStripMenuItem});
+            this.seatClassesToolStripMenuItem.Name = "seatClassesToolStripMenuItem";
+            this.seatClassesToolStripMenuItem.Size = new System.Drawing.Size(156, 36);
+            this.seatClassesToolStripMenuItem.Text = "Seat Classes";
+            // 
+            // viewSeatClassesToolStripMenuItem
+            // 
+            this.viewSeatClassesToolStripMenuItem.Name = "viewSeatClassesToolStripMenuItem";
+            this.viewSeatClassesToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
+            this.viewSeatClassesToolStripMenuItem.Text = "View Seat Classes";
+            this.viewSeatClassesToolStripMenuItem.Click += new System.EventHandler(this.viewSeatClassesToolStripMenuItem_Click);
+            // 
+            // tableToolStripMenuItem
+            // 
+            this.tableToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewTablesToolStripMenuItem,
+            this.addTableToolStripMenuItem,
+            this.removeTableToolStripMenuItem,
+            this.editTableToolStripMenuItem});
+            this.tableToolStripMenuItem.Name = "tableToolStripMenuItem";
+            this.tableToolStripMenuItem.Size = new System.Drawing.Size(92, 38);
+            this.tableToolStripMenuItem.Text = "Tables";
+            // 
+            // viewTablesToolStripMenuItem
+            // 
+            this.viewTablesToolStripMenuItem.Name = "viewTablesToolStripMenuItem";
+            this.viewTablesToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.viewTablesToolStripMenuItem.Text = "View Tables";
+            this.viewTablesToolStripMenuItem.Click += new System.EventHandler(this.viewTablesToolStripMenuItem_Click);
+            // 
+            // addTableToolStripMenuItem
+            // 
+            this.addTableToolStripMenuItem.Name = "addTableToolStripMenuItem";
+            this.addTableToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.addTableToolStripMenuItem.Text = "Add Table";
+            this.addTableToolStripMenuItem.Click += new System.EventHandler(this.addTableToolStripMenuItem_Click);
+            // 
+            // removeTableToolStripMenuItem
+            // 
+            this.removeTableToolStripMenuItem.Name = "removeTableToolStripMenuItem";
+            this.removeTableToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.removeTableToolStripMenuItem.Text = "Remove Table";
+            this.removeTableToolStripMenuItem.Click += new System.EventHandler(this.removeTableToolStripMenuItem_Click);
+            // 
+            // editTableToolStripMenuItem
+            // 
+            this.editTableToolStripMenuItem.Name = "editTableToolStripMenuItem";
+            this.editTableToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
+            this.editTableToolStripMenuItem.Text = "Edit Table";
+            this.editTableToolStripMenuItem.Click += new System.EventHandler(this.editTableToolStripMenuItem_Click);
+            // 
+            // viewTicketsToolStripMenuItem
+            // 
+            this.viewTicketsToolStripMenuItem.Name = "viewTicketsToolStripMenuItem";
+            this.viewTicketsToolStripMenuItem.Size = new System.Drawing.Size(271, 38);
+            this.viewTicketsToolStripMenuItem.Text = "View Tickets";
+            this.viewTicketsToolStripMenuItem.Click += new System.EventHandler(this.viewTicketsToolStripMenuItem_Click);
+            // 
+            // addTicketToolStripMenuItem
+            // 
+            this.addTicketToolStripMenuItem.Name = "addTicketToolStripMenuItem";
+            this.addTicketToolStripMenuItem.Size = new System.Drawing.Size(271, 38);
+            this.addTicketToolStripMenuItem.Text = "Add Ticket";
+            this.addTicketToolStripMenuItem.Click += new System.EventHandler(this.addTicketToolStripMenuItem_Click);
+            // 
+            // removeTicketToolStripMenuItem
+            // 
+            this.removeTicketToolStripMenuItem.Name = "removeTicketToolStripMenuItem";
+            this.removeTicketToolStripMenuItem.Size = new System.Drawing.Size(271, 38);
+            this.removeTicketToolStripMenuItem.Text = "Remove Ticket";
+            this.removeTicketToolStripMenuItem.Click += new System.EventHandler(this.removeTicketToolStripMenuItem_Click);
+            // 
+            // editTicketToolStripMenuItem
+            // 
+            this.editTicketToolStripMenuItem.Name = "editTicketToolStripMenuItem";
+            this.editTicketToolStripMenuItem.Size = new System.Drawing.Size(271, 38);
+            this.editTicketToolStripMenuItem.Text = "Edit Ticket";
+            this.editTicketToolStripMenuItem.Click += new System.EventHandler(this.editTicketToolStripMenuItem_Click);
             // 
             // FormMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1385, 718);
+            this.ClientSize = new System.Drawing.Size(2532, 929);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(2558, 1000);
             this.Name = "FormMainWindow";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
@@ -512,15 +586,23 @@
         private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem countriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewCountriesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addCountryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeCountryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editCountryToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem seatsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewSeatsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addSeatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeSeatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editSeatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seatClassesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewSeatClassesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewTablesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addTableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeTableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editTableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewTicketsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addTicketToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeTicketToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editTicketToolStripMenuItem;
     }
 }
 

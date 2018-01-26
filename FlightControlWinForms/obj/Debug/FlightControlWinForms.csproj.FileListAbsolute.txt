@@ -16,7 +16,6 @@ C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForm
 C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.exe
 C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.pdb
 C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormAddAirport.resources
-C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormAddCountry.resources
 C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormAddPassenger.resources
 C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormAddPlane.resources
 C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormAddRoute.resources
@@ -26,3 +25,6 @@ C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForm
 C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormEditPlane.resources
 C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormEditRoute.resources
 C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormEditSeat.resources
+C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormEditSeatClass.resources
+C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormAddTable.resources
+C:\Users\Natko Biscan\Documents\Visual Studio 2017\Projects\FlightControlWinForms\FlightControlWinForms\obj\Debug\FlightControlWinForms.FormEditTable.resources

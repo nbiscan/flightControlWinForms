@@ -13,9 +13,7 @@ namespace FlightControlWinForms
         void EditAirports();
 
         void ViewCountries();
-        void AddCountries();
-        void RemoveCountries();
-        void EditCountries();
+        void ViewSeatClasses();
 
         void ViewFlights();
         void AddFlights();
@@ -51,6 +49,16 @@ namespace FlightControlWinForms
         void AddStores();
         void RemoveStores();
         void EditStores();
+
+        void ViewTables();
+        void AddTables();
+        void RemoveTables();
+        void EditTables();
+
+        void ViewTickets();
+        void AddTickets();
+        void RemoveTickets();
+        void EditTickets();
 
     }
 }

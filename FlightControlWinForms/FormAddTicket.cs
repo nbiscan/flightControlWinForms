@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace FlightControlWinForms
 {
-    public partial class FormAddCountry : Form
+    public partial class FormAddTicket : Form
     {
-        public FormAddCountry()
+        public FormAddTicket()
         {
             InitializeComponent();
         }

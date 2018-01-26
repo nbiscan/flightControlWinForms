@@ -48,12 +48,6 @@
     <Compile Include="FormAddAirport.Designer.cs">
       <DependentUpon>FormAddAirport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddCountry.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAddCountry.Designer.cs">
-      <DependentUpon>FormAddCountry.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormAddFlight.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +89,18 @@
     </Compile>
     <Compile Include="FormAddStore.Designer.cs">
       <DependentUpon>FormAddStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddTable.Designer.cs">
+      <DependentUpon>FormAddTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddTicket.Designer.cs">
+      <DependentUpon>FormAddTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditAirport.cs">
       <SubType>Form</SubType>
@@ -138,11 +144,29 @@
     <Compile Include="FormEditSeat.Designer.cs">
       <DependentUpon>FormEditSeat.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditSeatClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditSeatClass.Designer.cs">
+      <DependentUpon>FormEditSeatClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditStore.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEditStore.Designer.cs">
       <DependentUpon>FormEditStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditTable.Designer.cs">
+      <DependentUpon>FormEditTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditTicket.Designer.cs">
+      <DependentUpon>FormEditTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMainWindow.cs">
       <SubType>Form</SubType>
@@ -162,9 +186,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddAirport.resx">
       <DependentUpon>FormAddAirport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormAddCountry.resx">
-      <DependentUpon>FormAddCountry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddFlight.resx">
       <DependentUpon>FormAddFlight.cs</DependentUpon>
@@ -187,6 +208,12 @@
     <EmbeddedResource Include="FormAddStore.resx">
       <DependentUpon>FormAddStore.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddTable.resx">
+      <DependentUpon>FormAddTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddTicket.resx">
+      <DependentUpon>FormAddTicket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditAirport.resx">
       <DependentUpon>FormEditAirport.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,8 +235,17 @@
     <EmbeddedResource Include="FormEditSeat.resx">
       <DependentUpon>FormEditSeat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditSeatClass.resx">
+      <DependentUpon>FormEditSeatClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditStore.resx">
       <DependentUpon>FormEditStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditTable.resx">
+      <DependentUpon>FormEditTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditTicket.resx">
+      <DependentUpon>FormEditTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMainWindow.resx">
       <DependentUpon>FormMainWindow.cs</DependentUpon>

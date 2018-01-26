@@ -15,11 +15,7 @@ namespace FlightControlWinForms
             faa.ShowDialog();
         }
 
-        public void AddCountries()
-        {
-            FormAddCountry fac = new FormAddCountry();
-            fac.ShowDialog();
-        }
+       
 
         public void AddFlights()
         {
@@ -61,6 +57,18 @@ namespace FlightControlWinForms
         {
             FormAddStore fas = new FormAddStore();
             fas.ShowDialog();
+        }
+
+        public void AddTables()
+        {
+            FormAddTable fat = new FormAddTable();
+            fat.ShowDialog();
+        }
+
+        public void AddTickets()
+        {
+            FormAddTicket fat = new FormAddTicket();
+            fat.ShowDialog();
         }
 
         public void EditAirports()
@@ -117,6 +125,19 @@ namespace FlightControlWinForms
             fes.ShowDialog();
         }
 
+        public void EditTables()
+        {
+            FormEditTable fet = new FormEditTable();
+            fet.ShowDialog();
+        }
+
+        public void EditTickets()
+        {
+            FormEditTicket fet = new FormEditTicket();
+            fet.ShowDialog();
+           
+        }
+
         public void RemoveAirports()
         {
             FormEditAirport fea = new FormEditAirport();
@@ -171,6 +192,18 @@ namespace FlightControlWinForms
             fes.ShowDialog();
         }
 
+        public void RemoveTables()
+        {
+            FormEditTable fet = new FormEditTable();
+            fet.ShowDialog();
+        }
+
+        public void RemoveTickets()
+        {
+            FormEditTicket fet = new FormEditTicket();
+            fet.ShowDialog();
+        }
+
         public void ViewAirports()
         {
             FormEditAirport fea = new FormEditAirport();
@@ -214,6 +247,12 @@ namespace FlightControlWinForms
 
         }
 
+        public void ViewSeatClasses()
+        {
+            FormEditSeatClass fvsc = new FormEditSeatClass();
+            fvsc.ShowDialog();
+        }
+
         public void ViewSeats()
         {
             FormEditSeat fes = new FormEditSeat();
@@ -224,6 +263,19 @@ namespace FlightControlWinForms
         {
             FormEditStore fes = new FormEditStore();
             fes.ShowDialog();
+        }
+
+        public void ViewTables()
+        {
+            FormEditTable fet = new FormEditTable();
+            fet.ShowDialog();
+        }
+
+        public void ViewTickets()
+        {
+            FormEditTicket fet = new FormEditTicket();
+            fet.ShowDialog();
+
         }
     }
 }

@@ -99,20 +99,7 @@ namespace FlightControlWinForms
             _controller.ViewCountries();
         }
 
-        private void addCountryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _controller.AddCountries();
-        }
-
-        private void removeCountryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _controller.RemoveCountries();
-        }
-
-        private void editCountryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _controller.EditCountries();
-        }
+       
 
         private void viewPlanesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -207,6 +194,51 @@ namespace FlightControlWinForms
         private void editSeatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _controller.EditSeats();
+        }
+
+        private void viewSeatClassesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.ViewSeatClasses();
+        }
+
+        private void viewTicketsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.ViewTickets();
+        }
+
+        private void addTicketToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.AddTickets();
+        }
+
+        private void removeTicketToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.RemoveTickets();
+        }
+
+        private void editTicketToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.EditTickets();
+        }
+
+        private void viewTablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.ViewTables();
+        }
+
+        private void addTableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.AddTables();
+        }
+
+        private void removeTableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.RemoveTables();
+        }
+
+        private void editTableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.EditTables();
         }
     }
 }

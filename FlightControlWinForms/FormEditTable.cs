@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace FlightControlWinForms
+{
+    public partial class FormEditTable : Form
+    {
+        public FormEditTable()
+        {
+            InitializeComponent();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

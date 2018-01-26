@@ -107,8 +107,8 @@ namespace FlightControlModel.Repos
 
             _comm.AddParameter("@id", p.Id);
             _comm.AddParameter("@name", p.Name);
-            _comm.AddParameter("@lastname", p.Address);
-            _comm.AddParameter("@birthday", p.ZipCode);
+            _comm.AddParameter("@address", p.Address);
+            _comm.AddParameter("@zipcode", p.ZipCode);
             _comm.AddParameter("@countryid", p.CountryId);
 
             _conn.Open();
