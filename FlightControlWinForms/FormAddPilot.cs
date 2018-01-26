@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightControlApi.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace FlightControlWinForms
         public FormAddPilot()
         {
             InitializeComponent();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,7 +30,12 @@ namespace FlightControlWinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Pilot p = new Pilot();
+            p.FirstName = textBox3.Text;
+            p.LastName = textBox1.Text;
+            p.BirthDay = dateTimePicker2.Value;
 
+            Program.MyConnection.Pilot.Insert(p);
         }
 
         private void button2_Click(object sender, EventArgs e)

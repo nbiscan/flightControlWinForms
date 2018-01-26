@@ -188,5 +188,25 @@ namespace FlightControlWinForms
         {
            
         }
+
+        private void viewSeatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.ViewSeats();
+        }
+
+        private void addSeatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.AddSeats();
+        }
+
+        private void removeSeatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.RemoveSeats();
+        }
+
+        private void editSeatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _controller.EditSeats();
+        }
     }
 }

@@ -98,9 +98,9 @@ namespace FlightControlModel.Repos
         public int Insert(Route p)
         {
             _comm.CommandText = "INSERT INTO Route " +
-                                "(Id, FromId, DestinationId) " +
+                                "(FromId, DestinationId) " +
                                 "VALUES " +
-                                "(@id, @from, @to);" +
+                                "(@from, @to);" +
                                 "SELECT SCOPE_IDENTITY();";
 
             _comm.AddParameter("@id", p.Id);

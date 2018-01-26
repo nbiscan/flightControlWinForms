@@ -100,9 +100,9 @@ namespace FlightControlModel.Repos
         public int Insert(Store p)
         {
             _comm.CommandText = "INSERT INTO Store " +
-                                "(Id, Name, Address, ZipCode, CountryId) " +
+                                "(Name, Address, ZipCode, CountryId) " +
                                 "VALUES " +
-                                "(@id, @name, @address, @zip, @countryid);" +
+                                "(@name, @address, @zip, @countryid);" +
                                 "SELECT SCOPE_IDENTITY();";
 
             _comm.AddParameter("@id", p.Id);
