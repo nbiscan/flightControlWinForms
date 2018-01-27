@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightControlApi.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,19 @@ namespace FlightControlWinForms
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Plane p = new Plane();
+            p.Model = textBox3.Text;
+            p.SerialNumber = textBox1.Text;
+            p.EconomyCapacity = Convert.ToInt32(numericUpDown4.Value);
+            p.BusinessCapacity = Convert.ToInt32(numericUpDown3.Value);
+            p.FirstClassCapacity = Convert.ToInt32(numericUpDown2.Value);
 
+            Program.MyConnection.Plane.Insert(p);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

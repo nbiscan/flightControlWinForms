@@ -60,6 +60,7 @@ namespace FlightControlModel.Repos
 
 
         }
+
         public List<Country> GetAll()
         {
             List<int> allCountrysIDs = new List<int>();
@@ -76,7 +77,7 @@ namespace FlightControlModel.Repos
                 {
                     while (rdr.Read())
                     {
-                        allCountrysIDs.Add(Convert.ToInt32(rdr["Id"]));
+                        allCountrysIDs.Add(Convert.ToInt32(rdr["id"]));
                     }
                 }
 
@@ -98,6 +99,7 @@ namespace FlightControlModel.Repos
                 _conn.Close();
             }
         }
-        
+
+
     }
 }

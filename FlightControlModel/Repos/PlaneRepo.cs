@@ -102,9 +102,9 @@ namespace FlightControlModel.Repos
         public int Insert(Plane p)
         {
             _comm.CommandText = "INSERT INTO Plane " +
-                                "(SerialNumber, EconomyCapacity, BusinessCapacity, FirstClassCapacity, Active) " +
+                                "(Model, SerialNumber, EconomyCapacity, BusinessCapacity, FirstClassCapacity) " +
                                 "VALUES " +
-                                "(@serialnumber, @economy, @business, @firstclass, @active);" +
+                                "(@model, @serialnumber, @economy, @business, @firstclass);" +
                                 "SELECT SCOPE_IDENTITY();";
 
             _comm.AddParameter("@id", p.Id);
@@ -112,7 +112,7 @@ namespace FlightControlModel.Repos
             _comm.AddParameter("@economy", p.EconomyCapacity);
             _comm.AddParameter("@business", p.BusinessCapacity);
             _comm.AddParameter("@firstclass", p.FirstClassCapacity);
-            _comm.AddParameter("@active", p.Active);
+            _comm.AddParameter("@model", p.Model);
 
             _conn.Open();
 
@@ -138,10 +138,10 @@ namespace FlightControlModel.Repos
         public bool Update(int id, Plane p)
         {
             _comm.CommandText = "UPDATE Plane " +
-                                "SET Id = @id, SerialNumber = @serialnumber, EconomyCapacity = @economy, BusinessCapacity = @business, FirstClassCapacity = @firstclass, Active = @active " +
+                                "SET Model = @model, SerialNumber = @serialnumber, EconomyCapacity = @economy, BusinessCapacity = @business, FirstClassCapacity = @firstclass, Active = @active " +
                                 "WHERE Id = @id ";
 
-            _comm.AddParameter("@id", p.Id);
+            _comm.AddParameter("@model", p.Model);
             _comm.AddParameter("@serialnumber", p.SerialNumber);
             _comm.AddParameter("@economy", p.EconomyCapacity);
             _comm.AddParameter("@business", p.BusinessCapacity);
