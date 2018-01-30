@@ -102,12 +102,12 @@ namespace FlightControlModel.Repos
         public int Insert(Flight p)
         {
             _comm.CommandText = "INSERT INTO Flight " +
-                                "(FirstName, LastName, BirthDay) " +
+                                "(RouteId, PlaneId, PilotId, DepTime, ArrTime, Canceled, Price) " +
                                 "VALUES " +
-                                "(@firstname, @lastname, @birthday);" +
+                                "(@routeid, @planeid, @pilotid, @deptime, @arrtime, @canc, @price);" +
                                 "SELECT SCOPE_IDENTITY();";
 
-            _comm.AddParameter("@id", p.Id);
+            _comm.AddParameter("@canc", false);
             _comm.AddParameter("@routeid", p.RouteId);
             _comm.AddParameter("@planeid", p.PlaneId);
             _comm.AddParameter("@pilotid", p.PilotId);

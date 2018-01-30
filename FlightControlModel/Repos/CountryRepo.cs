@@ -19,7 +19,7 @@ namespace FlightControlModel.Repos
 
             _comm.CommandText = "SELECT * " +
                                 "FROM country a " +
-                                "WHERE a.Id = @id;";
+                                "WHERE a.id = @id;";
 
             _comm.AddParameter("@id", id);
 
@@ -31,14 +31,35 @@ namespace FlightControlModel.Repos
                 {
                     rdr.Read();
 
+                    string Iso3;
+                    int NumCode;
+
+                    if ((rdr["iso3"] is DBNull))
+                    {
+                        Iso3 = "Null";
+                    }
+                    else
+                    {
+                        Iso3 = Convert.ToString(rdr["iso3"]);
+                    }
+                    if ((rdr["numcode"] is DBNull))
+                    {
+                        NumCode = 0;
+                    }
+                    else
+                    {
+                        NumCode = Convert.ToInt32(rdr["numcode"]);
+                    }
+
+
                     a = new Country()
                     {
                         Id = Convert.ToInt32(rdr["id"]),
                         iso = Convert.ToString(rdr["iso"]),
                         name = Convert.ToString(rdr["name"]),
                         printable_name = Convert.ToString(rdr["printable_name"]),
-                        iso3 = Convert.ToString(rdr["iso3"]),
-                        numcode = Convert.ToInt32(rdr["numcode"])
+                        iso3 = Iso3, //ima nullova
+                        numcode = NumCode //ima nullova
 
                     };
 
