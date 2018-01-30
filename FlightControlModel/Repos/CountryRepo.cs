@@ -42,6 +42,7 @@ namespace FlightControlModel.Repos
                     {
                         Iso3 = Convert.ToString(rdr["iso3"]);
                     }
+
                     if ((rdr["numcode"] is DBNull))
                     {
                         NumCode = 0;
@@ -58,8 +59,8 @@ namespace FlightControlModel.Repos
                         iso = Convert.ToString(rdr["iso"]),
                         name = Convert.ToString(rdr["name"]),
                         printable_name = Convert.ToString(rdr["printable_name"]),
-                        iso3 = Iso3, //ima nullova
-                        numcode = NumCode //ima nullova
+                        iso3 = Iso3,
+                        numcode = NumCode
 
                     };
 

@@ -15,12 +15,11 @@ namespace FlightControlWinForms
         public FormAddAirport()
         {
             InitializeComponent();
-            FlightControlApi.Models.Country[] items = Program.MyConnection.Country.GetAll().ToArray();
+            Country[] items = Program.MyConnection.Country.GetAll().ToArray();
 
             string[] tmpCountry = new string[6];
-            ListViewItem lvi;
 
-            foreach (FlightControlApi.Models.Country p in items)
+            foreach (Country p in items)
             {
                 tmpCountry[0] = p.Id.ToString();
                 tmpCountry[1] = p.iso;
@@ -30,12 +29,10 @@ namespace FlightControlWinForms
                 tmpCountry[5] = p.numcode.ToString();
 
 
-                lvi = new ListViewItem(tmpCountry);
-
-                comboBox3.Items.Add(lvi);
+                comboBox3.Items.Add(tmpCountry[0] + ' ' + tmpCountry[2]);
 
             }
-           
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -54,7 +51,7 @@ namespace FlightControlWinForms
             p.Name = textBox3.Text;
             p.Address = textBox1.Text;
             p.ZipCode = textBox4.Text;
-            p.CountryId = 3;
+            p.CountryId = Convert.ToInt32(comboBox3.SelectedItem.ToString().Split(' ')[0]);
 
             Program.MyConnection.Airport.Insert(p);
         }
