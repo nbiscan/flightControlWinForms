@@ -14,6 +14,8 @@ namespace FlightControlWinForms
         public FormEditFlights()
         {
             InitializeComponent();
+            listView1.FullRowSelect = true;
+            listView1.MultiSelect = false;
 
             FlightControlApi.Models.Flight[] items = Program.MyConnection.Flight.GetAll().ToArray();
 

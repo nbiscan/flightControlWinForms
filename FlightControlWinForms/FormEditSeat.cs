@@ -14,6 +14,8 @@ namespace FlightControlWinForms
         public FormEditSeat()
         {
             InitializeComponent();
+            listView1.FullRowSelect = true;
+            listView1.MultiSelect = false;
 
             FlightControlApi.Models.Seat[] pilots = Program.MyConnection.Seat.GetAll().ToArray();
 
@@ -36,6 +38,15 @@ namespace FlightControlWinForms
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.MyConnection.Seat.Delete(Convert.ToInt16(listView1.SelectedItems[0].Text));
+
+            MessageBox.Show("Item removed.");
+
+            listView1.SelectedItems[0].Remove();
         }
     }
 }

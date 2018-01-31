@@ -13,7 +13,10 @@ namespace FlightControlWinForms
     {
         public FormEditPilot()
         {
+
             InitializeComponent();
+            listView1.FullRowSelect = true;
+            listView1.MultiSelect = false;
 
             FlightControlApi.Models.Pilot[] pilots = Program.MyConnection.Pilot.GetAll().ToArray();
 

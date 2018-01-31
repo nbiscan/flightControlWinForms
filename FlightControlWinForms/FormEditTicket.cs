@@ -14,6 +14,8 @@ namespace FlightControlWinForms
         public FormEditTicket()
         {
             InitializeComponent();
+            listView1.FullRowSelect = true;
+            listView1.MultiSelect = false;
 
             FlightControlApi.Models.Ticket[] planes = Program.MyConnection.Ticket.GetAll().ToArray();
 

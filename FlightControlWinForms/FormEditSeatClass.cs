@@ -14,6 +14,8 @@ namespace FlightControlWinForms
         public FormEditSeatClass()
         {
             InitializeComponent();
+            listView1.FullRowSelect = true;
+            listView1.MultiSelect = false;
 
             FlightControlApi.Models.SeatClass[] items = Program.MyConnection.SeatClass.GetAll().ToArray();
 

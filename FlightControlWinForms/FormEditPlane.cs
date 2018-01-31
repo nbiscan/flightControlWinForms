@@ -14,6 +14,8 @@ namespace FlightControlWinForms
         public FormEditPlane()
         {
             InitializeComponent();
+            listView1.FullRowSelect = true;
+            listView1.MultiSelect = false;
 
             FlightControlApi.Models.Plane[] planes = Program.MyConnection.Plane.GetAll().ToArray();
 

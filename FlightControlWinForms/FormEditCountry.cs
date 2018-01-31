@@ -14,6 +14,8 @@ namespace FlightControlWinForms
         public FormEditCountry()
         {
             InitializeComponent();
+            listView1.FullRowSelect = true;
+            listView1.MultiSelect = false;
 
             FlightControlApi.Models.Country[] items = Program.MyConnection.Country.GetAll().ToArray();
 
