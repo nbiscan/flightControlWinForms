@@ -36,6 +36,8 @@ namespace FlightControlWinForms
             p.BirthDay = dateTimePicker2.Value;
 
             Program.MyConnection.Pilot.Insert(p);
+            MessageBox.Show("Item added.");
+            Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

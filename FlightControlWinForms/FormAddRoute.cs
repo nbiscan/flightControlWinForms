@@ -55,6 +55,8 @@ namespace FlightControlWinForms
             r.DestinationId = Convert.ToInt32(comboBox3.SelectedItem.ToString().Split(' ')[0]);
 
             Program.MyConnection.Route.Insert(r);
+            MessageBox.Show("Item added.");
+            Close();
         }
     }
 }

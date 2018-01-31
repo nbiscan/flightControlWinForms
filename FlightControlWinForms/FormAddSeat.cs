@@ -77,6 +77,8 @@ namespace FlightControlWinForms
             s.SeatClassId = Convert.ToInt32(SelectedSC);
 
             Program.MyConnection.Seat.Insert(s);
+            MessageBox.Show("Item added.");
+            Close();
         }
 
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)

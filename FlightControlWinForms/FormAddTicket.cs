@@ -93,6 +93,9 @@ namespace FlightControlWinForms
             t.Revoked = false;
 
             Program.MyConnection.Ticket.Insert(t);
+
+            MessageBox.Show("Item added.");
+            Close();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)

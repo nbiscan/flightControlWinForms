@@ -53,6 +53,8 @@ namespace FlightControlWinForms
             p.CountryId = Convert.ToInt32(comboBox3.SelectedItem.ToString().Split(' ')[0]);
 
             Program.MyConnection.Store.Insert(p);
+            MessageBox.Show("Item added.");
+            Close();
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)

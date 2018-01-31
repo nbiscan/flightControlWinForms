@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightControlApi.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,49 @@ namespace FlightControlWinForms
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Plane p = new Plane();
+            p.Model = textBox3.Text;
+            p.SerialNumber = textBox1.Text;
+            p.EconomyCapacity = Convert.ToInt16(numericUpDown4.Value);
+            p.BusinessCapacity = Convert.ToInt16(numericUpDown3.Value);
+            p.FirstClassCapacity = Convert.ToInt16(numericUpDown2.Value);
+            p.Active = 1;
+
+            Program.MyConnection.Plane.Update(Convert.ToInt16(p.Id), p);
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                Plane p = Program.MyConnection.Plane.Get(Convert.ToInt16(listView1.SelectedItems[0].Text));
+                textBox3.Text = p.Model;
+                textBox1.Text = p.SerialNumber;
+                numericUpDown4.Value = p.EconomyCapacity;
+                numericUpDown3.Value = p.BusinessCapacity;
+                numericUpDown2.Value = p.FirstClassCapacity;
+
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

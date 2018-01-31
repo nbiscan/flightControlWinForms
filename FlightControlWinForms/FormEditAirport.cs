@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightControlApi.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,7 @@ namespace FlightControlWinForms
                 lvi = new ListViewItem(tmpAirport);
 
                 listView1.Items.Add(lvi);
+                comboBox3.Items.Add(tmpAirport[0] + ' ' + tmpAirport[1]);
             }
         }
 
@@ -44,12 +46,39 @@ namespace FlightControlWinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.MyConnection.Airport.Delete(Convert.ToInt16(listView1.SelectedItems[0].Text));
+            if (listView1.SelectedItems.Count > 0)
+            {
+                Program.MyConnection.Airport.Delete(Convert.ToInt16(listView1.SelectedItems[0].Text));
 
-            MessageBox.Show("Item removed.");
+                MessageBox.Show("Item removed.");
 
-            listView1.SelectedItems[0].Remove();
+                listView1.SelectedItems[0].Remove();
+            }
 
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                Airport p = Program.MyConnection.Airport.Get(Convert.ToInt16(listView1.SelectedItems[0].Text));
+                textBox3.Text = p.Name;
+                textBox1.Text = p.Address;
+                textBox4.Text = p.ZipCode;
+                //comboBox3.SelectedIndex = Convert.ToInt16(p.CountryId);
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Airport a = new Airport();
+            a.Name = textBox3.Text;
+            a.Address = textBox1.Text;
+            a.ZipCode = textBox4.Text;
+            a.CountryId = Convert.ToInt32(comboBox3.SelectedItem.ToString().Split(' ')[0]);
+
+            Program.MyConnection.Airport.Update(Convert.ToInt32(a.Id), a);
         }
     }
 }

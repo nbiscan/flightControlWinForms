@@ -48,11 +48,14 @@ namespace FlightControlWinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.MyConnection.Passenger.Delete(Convert.ToInt16(listView1.SelectedItems[0].Text));
+            if (listView1.SelectedItems.Count != 0)
+            {
+                Program.MyConnection.Passenger.Delete(Convert.ToInt16(listView1.SelectedItems[0].Text));
 
-            MessageBox.Show("Item removed.");
+                MessageBox.Show("Item removed.");
 
-            listView1.SelectedItems[0].Remove();
+                listView1.SelectedItems[0].Remove();
+            }
         }
     }
 }

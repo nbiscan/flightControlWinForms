@@ -27,6 +27,8 @@ namespace FlightControlWinForms
             p.FirstClassCapacity = Convert.ToInt32(numericUpDown2.Value);
 
             Program.MyConnection.Plane.Insert(p);
+            MessageBox.Show("Item added.");
+            Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

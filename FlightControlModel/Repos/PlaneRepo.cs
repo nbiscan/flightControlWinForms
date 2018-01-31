@@ -141,6 +141,7 @@ namespace FlightControlModel.Repos
                                 "SET Model = @model, SerialNumber = @serialnumber, EconomyCapacity = @economy, BusinessCapacity = @business, FirstClassCapacity = @firstclass, Active = @active " +
                                 "WHERE Id = @id ";
 
+            _comm.AddParameter("@id", id);
             _comm.AddParameter("@model", p.Model);
             _comm.AddParameter("@serialnumber", p.SerialNumber);
             _comm.AddParameter("@economy", p.EconomyCapacity);
