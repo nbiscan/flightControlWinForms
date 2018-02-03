@@ -34,7 +34,25 @@ namespace FlightControlWinForms
                 lvi = new ListViewItem(tmpStore);
 
                 listView1.Items.Add(lvi);
-                comboBox3.Items.Add(p.CountryId.ToString());
+                //comboBox3.Items.Add(p.CountryId.ToString());
+            }
+
+            Country[] items = Program.MyConnection.Country.GetAll().ToArray();
+
+            string[] tmpCountry = new string[6];
+
+            foreach (Country p in items)
+            {
+                tmpCountry[0] = p.Id.ToString();
+                tmpCountry[1] = p.iso;
+                tmpCountry[2] = p.name;
+                tmpCountry[3] = p.iso3;
+                tmpCountry[4] = p.printable_name;
+                tmpCountry[5] = p.numcode.ToString();
+
+
+                comboBox3.Items.Add(tmpCountry[0] + ' ' + tmpCountry[2]);
+
             }
         }
 
@@ -63,7 +81,7 @@ namespace FlightControlWinForms
                 textBox3.Text = s.Name;
                 textBox1.Text = s.Address;
                 textBox2.Text = s.ZipCode;
-                comboBox3.SelectedIndex = listView1.SelectedIndices[0];
+                comboBox3.SelectedItem = s.CountryId.ToString() + ' ' + Program.MyConnection.Country.Get(Convert.ToInt16(s.CountryId)).name;
 
             }
         }
@@ -80,7 +98,7 @@ namespace FlightControlWinForms
             s.Name = textBox3.Text;
             s.Address = textBox1.Text;
             s.ZipCode = textBox2.Text;
-            s.CountryId = Convert.ToInt16(comboBox3.SelectedItem.ToString());
+            s.CountryId = Convert.ToInt16(comboBox3.SelectedItem.ToString().Split(' ')[0]);
 
             Program.MyConnection.Store.Update(Convert.ToInt32(s.Id), s);
 
