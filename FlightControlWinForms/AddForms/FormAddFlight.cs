@@ -93,6 +93,8 @@ namespace FlightControlWinForms
             f.Price =  Convert.ToInt32(numericUpDown1.Value);
 
             Program.MyConnection.Flight.Insert(f);
+            MessageBox.Show("Item created");
+            Close();
         }
 
         private void cbxSensor_SelectedIndexChanged(object sender, EventArgs e)

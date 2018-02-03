@@ -42,118 +42,118 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAddAirport.cs">
+    <Compile Include="AddForms\FormAddAirport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddAirport.Designer.cs">
+    <Compile Include="AddForms\FormAddAirport.Designer.cs">
       <DependentUpon>FormAddAirport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddFlight.cs">
+    <Compile Include="AddForms\FormAddFlight.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddFlight.Designer.cs">
+    <Compile Include="AddForms\FormAddFlight.Designer.cs">
       <DependentUpon>FormAddFlight.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddPassenger.cs">
+    <Compile Include="AddForms\FormAddPassenger.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddPassenger.Designer.cs">
+    <Compile Include="AddForms\FormAddPassenger.Designer.cs">
       <DependentUpon>FormAddPassenger.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddPilot.cs">
+    <Compile Include="AddForms\FormAddPilot.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddPilot.Designer.cs">
+    <Compile Include="AddForms\FormAddPilot.Designer.cs">
       <DependentUpon>FormAddPilot.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddPlane.cs">
+    <Compile Include="AddForms\FormAddPlane.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddPlane.Designer.cs">
+    <Compile Include="AddForms\FormAddPlane.Designer.cs">
       <DependentUpon>FormAddPlane.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddRoute.cs">
+    <Compile Include="AddForms\FormAddRoute.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddRoute.Designer.cs">
+    <Compile Include="AddForms\FormAddRoute.Designer.cs">
       <DependentUpon>FormAddRoute.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddSeat.cs">
+    <Compile Include="AddForms\FormAddSeat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddSeat.Designer.cs">
+    <Compile Include="AddForms\FormAddSeat.Designer.cs">
       <DependentUpon>FormAddSeat.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddStore.cs">
+    <Compile Include="AddForms\FormAddStore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddStore.Designer.cs">
+    <Compile Include="AddForms\FormAddStore.Designer.cs">
       <DependentUpon>FormAddStore.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddTicket.cs">
+    <Compile Include="AddForms\FormAddTicket.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddTicket.Designer.cs">
+    <Compile Include="AddForms\FormAddTicket.Designer.cs">
       <DependentUpon>FormAddTicket.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditAirport.cs">
+    <Compile Include="EditForms\FormEditAirport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditAirport.Designer.cs">
+    <Compile Include="EditForms\FormEditAirport.Designer.cs">
       <DependentUpon>FormEditAirport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditCountry.cs">
+    <Compile Include="EditForms\FormEditCountry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditCountry.Designer.cs">
+    <Compile Include="EditForms\FormEditCountry.Designer.cs">
       <DependentUpon>FormEditCountry.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditPassenger.cs">
+    <Compile Include="EditForms\FormEditPassenger.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditPassenger.Designer.cs">
+    <Compile Include="EditForms\FormEditPassenger.Designer.cs">
       <DependentUpon>FormEditPassenger.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditPilot.cs">
+    <Compile Include="EditForms\FormEditPilot.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditPilot.Designer.cs">
+    <Compile Include="EditForms\FormEditPilot.Designer.cs">
       <DependentUpon>FormEditPilot.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditPlane.cs">
+    <Compile Include="EditForms\FormEditPlane.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditPlane.Designer.cs">
+    <Compile Include="EditForms\FormEditPlane.Designer.cs">
       <DependentUpon>FormEditPlane.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditRoute.cs">
+    <Compile Include="EditForms\FormEditRoute.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditRoute.Designer.cs">
+    <Compile Include="EditForms\FormEditRoute.Designer.cs">
       <DependentUpon>FormEditRoute.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditSeat.cs">
+    <Compile Include="EditForms\FormEditSeat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditSeat.Designer.cs">
+    <Compile Include="EditForms\FormEditSeat.Designer.cs">
       <DependentUpon>FormEditSeat.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditSeatClass.cs">
+    <Compile Include="EditForms\FormEditSeatClass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditSeatClass.Designer.cs">
+    <Compile Include="EditForms\FormEditSeatClass.Designer.cs">
       <DependentUpon>FormEditSeatClass.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditStore.cs">
+    <Compile Include="EditForms\FormEditStore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditStore.Designer.cs">
+    <Compile Include="EditForms\FormEditStore.Designer.cs">
       <DependentUpon>FormEditStore.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditTicket.cs">
+    <Compile Include="EditForms\FormEditTicket.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditTicket.Designer.cs">
+    <Compile Include="EditForms\FormEditTicket.Designer.cs">
       <DependentUpon>FormEditTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMainWindow.cs">
@@ -162,77 +162,77 @@
     <Compile Include="FormMainWindow.Designer.cs">
       <DependentUpon>FormMainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditFlights.cs">
+    <Compile Include="EditForms\FormEditFlights.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditFlights.Designer.cs">
+    <Compile Include="EditForms\FormEditFlights.Designer.cs">
       <DependentUpon>FormEditFlights.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\IMainController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="AppStarter\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormAddAirport.resx">
+    <EmbeddedResource Include="AddForms\FormAddAirport.resx">
       <DependentUpon>FormAddAirport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddFlight.resx">
+    <EmbeddedResource Include="AddForms\FormAddFlight.resx">
       <DependentUpon>FormAddFlight.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddPassenger.resx">
+    <EmbeddedResource Include="AddForms\FormAddPassenger.resx">
       <DependentUpon>FormAddPassenger.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddPilot.resx">
+    <EmbeddedResource Include="AddForms\FormAddPilot.resx">
       <DependentUpon>FormAddPilot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddPlane.resx">
+    <EmbeddedResource Include="AddForms\FormAddPlane.resx">
       <DependentUpon>FormAddPlane.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddRoute.resx">
+    <EmbeddedResource Include="AddForms\FormAddRoute.resx">
       <DependentUpon>FormAddRoute.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddSeat.resx">
+    <EmbeddedResource Include="AddForms\FormAddSeat.resx">
       <DependentUpon>FormAddSeat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddStore.resx">
+    <EmbeddedResource Include="AddForms\FormAddStore.resx">
       <DependentUpon>FormAddStore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddTicket.resx">
+    <EmbeddedResource Include="AddForms\FormAddTicket.resx">
       <DependentUpon>FormAddTicket.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditAirport.resx">
+    <EmbeddedResource Include="EditForms\FormEditAirport.resx">
       <DependentUpon>FormEditAirport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditCountry.resx">
+    <EmbeddedResource Include="EditForms\FormEditCountry.resx">
       <DependentUpon>FormEditCountry.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditPassenger.resx">
+    <EmbeddedResource Include="EditForms\FormEditPassenger.resx">
       <DependentUpon>FormEditPassenger.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditPilot.resx">
+    <EmbeddedResource Include="EditForms\FormEditPilot.resx">
       <DependentUpon>FormEditPilot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditPlane.resx">
+    <EmbeddedResource Include="EditForms\FormEditPlane.resx">
       <DependentUpon>FormEditPlane.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditRoute.resx">
+    <EmbeddedResource Include="EditForms\FormEditRoute.resx">
       <DependentUpon>FormEditRoute.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditSeat.resx">
+    <EmbeddedResource Include="EditForms\FormEditSeat.resx">
       <DependentUpon>FormEditSeat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditSeatClass.resx">
+    <EmbeddedResource Include="EditForms\FormEditSeatClass.resx">
       <DependentUpon>FormEditSeatClass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditStore.resx">
+    <EmbeddedResource Include="EditForms\FormEditStore.resx">
       <DependentUpon>FormEditStore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditTicket.resx">
+    <EmbeddedResource Include="EditForms\FormEditTicket.resx">
       <DependentUpon>FormEditTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMainWindow.resx">
       <DependentUpon>FormMainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditFlights.resx">
+    <EmbeddedResource Include="EditForms\FormEditFlights.resx">
       <DependentUpon>FormEditFlights.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

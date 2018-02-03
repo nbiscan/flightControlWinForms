@@ -52,6 +52,8 @@ namespace FlightControlWinForms
             p.CountryId = Convert.ToInt32(comboBox3.SelectedItem.ToString().Split(' ')[0]);
 
             Program.MyConnection.Passenger.Insert(p);
+            MessageBox.Show("Item created");
+            Close();
         }
     }
 }
