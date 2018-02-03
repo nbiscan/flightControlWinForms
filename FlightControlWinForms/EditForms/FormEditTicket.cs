@@ -92,9 +92,9 @@ namespace FlightControlWinForms
             {
                 tmpPlane[0] = p.Id.ToString();
                 tmpPlane[1] = p.Price.ToString();
-                tmpPlane[2] = p.PassengerId.ToString();
-                tmpPlane[3] = p.SeatId.ToString();
-                tmpPlane[4] = p.StoreId.ToString();
+                tmpPlane[2] = Program.MyConnection.Passenger.Get(Convert.ToInt16(p.PassengerId)).Name; //p.PassengerId.ToString();
+                tmpPlane[3] = Program.MyConnection.Seat.Get(Convert.ToInt16(p.SeatId)).Num.ToString(); //p.SeatId.ToString();
+                tmpPlane[4] = Program.MyConnection.Store.Get(Convert.ToInt16(p.StoreId)).Name; //p.StoreId.ToString();
                 tmpPlane[5] = p.FlightId.ToString();
                 tmpPlane[6] = p.Revoked.ToString();
 

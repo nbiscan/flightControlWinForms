@@ -102,8 +102,8 @@ namespace FlightControlWinForms
             {
                 tmpFlight[0] = p.Id.ToString();
                 tmpFlight[1] = p.RouteId.ToString();
-                tmpFlight[2] = p.PlaneId.ToString();
-                tmpFlight[3] = p.PilotId.ToString();
+                tmpFlight[2] = Program.MyConnection.Plane.Get(Convert.ToInt32(p.PlaneId)).Model; //p.PlaneId.ToString();
+                tmpFlight[3] = Program.MyConnection.Pilot.Get(Convert.ToInt32(p.PilotId)).LastName; //p.PilotId.ToString();
                 tmpFlight[4] = p.DepTime.ToString();
                 tmpFlight[5] = p.ArrTime.ToString();
                 tmpFlight[6] = p.Canceled.ToString();

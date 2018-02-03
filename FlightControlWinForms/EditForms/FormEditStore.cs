@@ -102,7 +102,8 @@ namespace FlightControlWinForms
                 tmpStore[1] = p.Name;
                 tmpStore[2] = p.Address;
                 tmpStore[3] = p.ZipCode.ToString();
-                tmpStore[4] = p.CountryId.ToString();
+                tmpStore[4] = Program.MyConnection.Country.Get(Convert.ToInt16(p.CountryId)).name; //p.CountryId.ToString();
+
 
                 lvi = new ListViewItem(tmpStore);
 

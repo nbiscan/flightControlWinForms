@@ -99,8 +99,9 @@ namespace FlightControlWinForms
             {
                 tmpSeat[0] = p.Id.ToString();
                 tmpSeat[1] = p.Num.ToString();
-                tmpSeat[2] = p.PlaneId.ToString();
-                tmpSeat[3] = p.SeatClassId.ToString();
+                tmpSeat[2] = Program.MyConnection.Plane.Get(Convert.ToInt16(p.PlaneId)).Model; //p.PlaneId.ToString();
+                tmpSeat[3] = Program.MyConnection.SeatClass.Get(Convert.ToInt16(p.SeatClassId)).Name; //p.SeatClassId.ToString();
+
 
                 lvi = new ListViewItem(tmpSeat);
 

@@ -94,8 +94,8 @@ namespace FlightControlWinForms
             foreach (FlightControlApi.Models.Route p in pilots)
             {
                 tmpRoute[0] = p.Id.ToString();
-                tmpRoute[1] = p.FromId.ToString();
-                tmpRoute[2] = p.DestinationId.ToString();
+                tmpRoute[1] = Program.MyConnection.Airport.Get(Convert.ToInt16(p.FromId)).Name; //p.FromId.ToString();
+                tmpRoute[2] = Program.MyConnection.Airport.Get(Convert.ToInt16(p.DestinationId)).Name; //p.DestinationId.ToString();
 
 
                 lvi = new ListViewItem(tmpRoute);
