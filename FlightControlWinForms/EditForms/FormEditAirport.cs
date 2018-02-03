@@ -30,12 +30,12 @@ namespace FlightControlWinForms
                 tmpAirport[1] = p.Name;
                 tmpAirport[2] = p.Address;
                 tmpAirport[3] = p.ZipCode;
-                tmpAirport[4] = p.CountryId.ToString();
+                tmpAirport[4] = Program.MyConnection.Country.Get(Convert.ToInt16(p.CountryId)).name; //p.CountryId.ToString();
 
                 lvi = new ListViewItem(tmpAirport);
 
                 listView1.Items.Add(lvi);
-                comboBox3.Items.Add(tmpAirport[4]);
+                comboBox3.Items.Add(p.CountryId.ToString());
             }
         }
 

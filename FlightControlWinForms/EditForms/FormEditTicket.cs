@@ -27,18 +27,18 @@ namespace FlightControlWinForms
             {
                 tmpPlane[0] = p.Id.ToString();
                 tmpPlane[1] = p.Price.ToString();
-                tmpPlane[2] = p.PassengerId.ToString();
-                tmpPlane[3] = p.SeatId.ToString();
-                tmpPlane[4] = p.StoreId.ToString();
+                tmpPlane[2] = Program.MyConnection.Passenger.Get(Convert.ToInt16(p.PassengerId)).Name; //p.PassengerId.ToString();
+                tmpPlane[3] = Program.MyConnection.Seat.Get(Convert.ToInt16(p.SeatId)).Num.ToString(); //p.SeatId.ToString();
+                tmpPlane[4] = Program.MyConnection.Store.Get(Convert.ToInt16(p.StoreId)).Name; //p.StoreId.ToString();
                 tmpPlane[5] = p.FlightId.ToString();
                 tmpPlane[6] = p.Revoked.ToString();
 
                 lvi = new ListViewItem(tmpPlane);
 
                 listView1.Items.Add(lvi);
-                comboBox2.Items.Add(tmpPlane[2]);
-                comboBox1.Items.Add(tmpPlane[3]);
-                comboBox3.Items.Add(tmpPlane[4]);
+                comboBox2.Items.Add(p.PassengerId.ToString());
+                comboBox1.Items.Add(p.SeatId.ToString());
+                comboBox3.Items.Add(p.StoreId.ToString());
                 comboBox4.Items.Add(tmpPlane[5]);
             }
 

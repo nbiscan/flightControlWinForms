@@ -29,12 +29,12 @@ namespace FlightControlWinForms
                 tmpPassenger[1] = p.Name;
                 tmpPassenger[2] = p.Email;
                 tmpPassenger[3] = p.Identifier;
-                tmpPassenger[4] = p.CountryId.ToString();
+                tmpPassenger[4] = Program.MyConnection.Country.Get(Convert.ToInt16(p.CountryId)).name; //p.CountryId.ToString();
 
                 lvi = new ListViewItem(tmpPassenger);
 
                 listView1.Items.Add(lvi);
-                comboBox3.Items.Add(tmpPassenger[4]);
+                comboBox3.Items.Add(p.CountryId.ToString());
             }
         }
 

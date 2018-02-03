@@ -221,6 +221,9 @@ namespace FlightControlWinForms
             _controller.EditTickets();
         }
 
-       
+        private void FormMainWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

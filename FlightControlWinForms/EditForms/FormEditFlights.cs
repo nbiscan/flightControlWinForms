@@ -25,10 +25,11 @@ namespace FlightControlWinForms
 
             foreach (FlightControlApi.Models.Flight p in items)
             {
+
                 tmpFlight[0] = p.Id.ToString();
                 tmpFlight[1] = p.RouteId.ToString();
-                tmpFlight[2] = p.PlaneId.ToString();
-                tmpFlight[3] = p.PilotId.ToString();
+                tmpFlight[2] = Program.MyConnection.Plane.Get(Convert.ToInt32(p.PlaneId)).Model; //p.PlaneId.ToString();
+                tmpFlight[3] = Program.MyConnection.Pilot.Get(Convert.ToInt32(p.PilotId)).LastName; //p.PilotId.ToString();
                 tmpFlight[4] = p.DepTime.ToString();
                 tmpFlight[5] = p.ArrTime.ToString();
                 tmpFlight[6] = p.Canceled.ToString();
@@ -39,8 +40,8 @@ namespace FlightControlWinForms
 
                 listView1.Items.Add(lvi);
                 cbxSensor.Items.Add(tmpFlight[1]);
-                comboBox1.Items.Add(tmpFlight[2]);
-                comboBox2.Items.Add(tmpFlight[3]);
+                comboBox1.Items.Add(p.PlaneId.ToString());
+                comboBox2.Items.Add(p.PilotId.ToString());
 
             }
         }

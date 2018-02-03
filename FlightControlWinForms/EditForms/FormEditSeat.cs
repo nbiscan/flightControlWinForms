@@ -27,14 +27,14 @@ namespace FlightControlWinForms
             {
                 tmpSeat[0] = p.Id.ToString();
                 tmpSeat[1] = p.Num.ToString();
-                tmpSeat[2] = p.PlaneId.ToString();
-                tmpSeat[3] = p.SeatClassId.ToString();
+                tmpSeat[2] = Program.MyConnection.Plane.Get(Convert.ToInt16(p.PlaneId)).Model; //p.PlaneId.ToString();
+                tmpSeat[3] = Program.MyConnection.SeatClass.Get(Convert.ToInt16(p.SeatClassId)).Name; //p.SeatClassId.ToString();
 
                 lvi = new ListViewItem(tmpSeat);
 
                 listView1.Items.Add(lvi);
-                comboBox1.Items.Add(tmpSeat[2]);
-                comboBox3.Items.Add(tmpSeat[3]);
+                comboBox1.Items.Add(p.PlaneId.ToString());
+                comboBox3.Items.Add(p.SeatClassId.ToString());
 
             }
         }
