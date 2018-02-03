@@ -35,7 +35,7 @@ namespace FlightControlWinForms
                 lvi = new ListViewItem(tmpAirport);
 
                 listView1.Items.Add(lvi);
-                comboBox3.Items.Add(tmpAirport[0] + ' ' + tmpAirport[1]);
+                comboBox3.Items.Add(tmpAirport[4]);
             }
         }
 
@@ -65,7 +65,7 @@ namespace FlightControlWinForms
                 textBox3.Text = p.Name;
                 textBox1.Text = p.Address;
                 textBox4.Text = p.ZipCode;
-                //comboBox3.SelectedIndex = Convert.ToInt16(p.CountryId);
+                comboBox3.SelectedIndex = listView1.SelectedIndices[0];
 
             }
         }
@@ -73,12 +73,15 @@ namespace FlightControlWinForms
         private void button3_Click(object sender, EventArgs e)
         {
             Airport a = new Airport();
+            a.Id = Convert.ToInt16(listView1.SelectedItems[0].Text);
             a.Name = textBox3.Text;
             a.Address = textBox1.Text;
             a.ZipCode = textBox4.Text;
             a.CountryId = Convert.ToInt32(comboBox3.SelectedItem.ToString().Split(' ')[0]);
 
             Program.MyConnection.Airport.Update(Convert.ToInt32(a.Id), a);
+
+            MessageBox.Show("Item updated");
         }
     }
 }

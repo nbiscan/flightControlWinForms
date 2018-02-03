@@ -131,7 +131,7 @@ namespace FlightControlModel.Repos
         public bool Update(int id, Route p)
         {
             _comm.CommandText = "UPDATE Route " +
-                                "SET Id = @id, FromId = @from, DestinationId = @to" +
+                                "SET FromId = @from, DestinationId = @to " +
                                 "WHERE Id = @id ";
 
             _comm.AddParameter("@id", p.Id);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightControlApi.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +34,7 @@ namespace FlightControlWinForms
                 lvi = new ListViewItem(tmpStore);
 
                 listView1.Items.Add(lvi);
+                comboBox3.Items.Add(tmpStore[4]);
             }
         }
 
@@ -51,6 +53,38 @@ namespace FlightControlWinForms
 
                 listView1.SelectedItems[0].Remove();
             }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                Store s = Program.MyConnection.Store.Get(Convert.ToInt16(listView1.SelectedItems[0].Text));
+                textBox3.Text = s.Name;
+                textBox1.Text = s.Address;
+                textBox2.Text = s.ZipCode;
+                comboBox3.SelectedIndex = listView1.SelectedIndices[0];
+
+            }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Store s = new Store();
+            s.Id = Convert.ToInt16(listView1.SelectedItems[0].Text);
+            s.Name = textBox3.Text;
+            s.Address = textBox1.Text;
+            s.ZipCode = textBox2.Text;
+            s.CountryId = Convert.ToInt16(comboBox3.SelectedItem.ToString());
+
+            Program.MyConnection.Store.Update(Convert.ToInt32(s.Id), s);
+
+            MessageBox.Show("Item updated");
         }
     }
 }

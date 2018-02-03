@@ -168,9 +168,9 @@
     <Compile Include="FormEditFlights.Designer.cs">
       <DependentUpon>FormEditFlights.cs</DependentUpon>
     </Compile>
-    <Compile Include="IMainController.cs" />
-    <Compile Include="MainController.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Controllers\IMainController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="AppStarter\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddAirport.resx">
       <DependentUpon>FormAddAirport.cs</DependentUpon>

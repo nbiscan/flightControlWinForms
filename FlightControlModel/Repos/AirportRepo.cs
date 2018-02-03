@@ -31,13 +31,23 @@ namespace FlightControlModel.Repos
                 {
                     rdr.Read();
 
+                    int cid;
+                    if ((rdr["CountryId"] == DBNull.Value))
+                    {
+                        cid = 0;
+                    }
+                    else
+                    {
+                        cid = Convert.ToInt32(rdr["CountryId"]);
+                    }
+
                     a = new Airport()
                     {
                         Id = Convert.ToInt32(rdr["Id"]),
                         Name = Convert.ToString(rdr["Name"]),
                         Address = Convert.ToString(rdr["Address"]),
                         ZipCode = Convert.ToString(rdr["ZipCode"]),
-                        CountryId = Convert.ToInt32(rdr["CountryId"])
+                        CountryId = cid
 
                     };
 
@@ -135,7 +145,7 @@ namespace FlightControlModel.Repos
         public bool Update(int id, Airport p)
         {
             _comm.CommandText = "UPDATE Airport " +
-                                "SET Id = @id, Name = @name, Address = @address, ZIPCode = @zipcode, CountryId = @countryid " +
+                                "SET  Name = @name, Address = @address, ZIPCode = @zipcode, CountryId = @countryid " +
                                 "WHERE Id = @id ";
 
             _comm.AddParameter("@id", p.Id);

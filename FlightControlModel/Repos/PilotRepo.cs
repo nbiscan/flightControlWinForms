@@ -132,7 +132,7 @@ namespace FlightControlModel.Repos
         public bool Update(int id, Pilot p)
         {
             _comm.CommandText = "UPDATE Pilot " +
-                                "SET Id = @id, FirstName = @firstname, LastName = @lastname, BirthDay = @birthday " +
+                                "SET FirstName = @firstname, LastName = @lastname " +
                                 "WHERE Id = @id ";
 
             _comm.AddParameter("@id", p.Id);
@@ -145,7 +145,7 @@ namespace FlightControlModel.Repos
             try
             {
                 _comm.ExecuteNonQuery();
-
+                
                 _comm.Parameters.Clear();
                 _conn.Close();
 

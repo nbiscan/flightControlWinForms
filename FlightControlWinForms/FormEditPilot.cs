@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightControlApi.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,17 +37,39 @@ namespace FlightControlWinForms
                 listView1.Items.Add(lvi);
 
             }
-            
+
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (listView1.SelectedItems.Count > 0)
+            {
+                Pilot p = Program.MyConnection.Pilot.Get(Convert.ToInt16(listView1.SelectedItems[0].Text));
+                textBox3.Text = p.FirstName;
+                textBox1.Text = p.LastName;
+                dateTimePicker2.Value = Convert.ToDateTime(p.BirthDay);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                Pilot p = new Pilot();
+                p.Id = Convert.ToInt16(listView1.SelectedItems[0].Text);
+                p.FirstName = textBox3.Text;
+                p.LastName = textBox1.Text;
+                p.BirthDay = dateTimePicker2.Value;
+
+                Program.MyConnection.Pilot.Update(Convert.ToInt32(p.Id), p);
+
+                MessageBox.Show("Item edited");
+            }
         }
     }
 }

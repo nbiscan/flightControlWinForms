@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightControlApi.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,11 +28,13 @@ namespace FlightControlWinForms
                 tmpRoute[0] = p.Id.ToString();
                 tmpRoute[1] = p.FromId.ToString();
                 tmpRoute[2] = p.DestinationId.ToString();
-                
+
 
                 lvi = new ListViewItem(tmpRoute);
 
                 listView1.Items.Add(lvi);
+                comboBox1.Items.Add(tmpRoute[1]);
+                comboBox3.Items.Add(tmpRoute[2]);
             }
 
         }
@@ -50,6 +53,32 @@ namespace FlightControlWinForms
                 MessageBox.Show("Item removed.");
 
                 listView1.SelectedItems[0].Remove();
+            }
+        }
+
+        private void FormEditRoute_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Route r = new Route();
+            r.Id = Convert.ToInt16(listView1.SelectedItems[0].Text);
+            r.FromId = Convert.ToInt16(comboBox1.SelectedItem.ToString());
+            r.DestinationId = Convert.ToInt16(comboBox3.SelectedItem.ToString());
+
+            Program.MyConnection.Route.Update(Convert.ToInt32(r.Id), r);
+
+            MessageBox.Show("Item updated");
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                comboBox1.SelectedIndex = listView1.SelectedIndices[0];
+                comboBox3.SelectedIndex = listView1.SelectedIndices[0];
             }
         }
     }

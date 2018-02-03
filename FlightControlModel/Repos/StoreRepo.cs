@@ -135,7 +135,7 @@ namespace FlightControlModel.Repos
         public bool Update(int id, Store p)
         {
             _comm.CommandText = "UPDATE Store " +
-                                "SET Id = @id, Name = @name, Address = @address, ZipCode = @zip, CountryId = @countryid " +
+                                "SET Name = @name, Address = @address, ZipCode = @zip, CountryId = @countryid " +
                                 "WHERE Id = @id ";
 
             _comm.AddParameter("@id", p.Id);

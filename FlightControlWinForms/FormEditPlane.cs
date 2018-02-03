@@ -46,15 +46,21 @@ namespace FlightControlWinForms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Plane p = new Plane();
-            p.Model = textBox3.Text;
-            p.SerialNumber = textBox1.Text;
-            p.EconomyCapacity = Convert.ToInt16(numericUpDown4.Value);
-            p.BusinessCapacity = Convert.ToInt16(numericUpDown3.Value);
-            p.FirstClassCapacity = Convert.ToInt16(numericUpDown2.Value);
-            p.Active = 1;
+            if (listView1.SelectedItems.Count > 0)
+            {
+                Plane p = new Plane();
+                p.Id = Convert.ToInt16(listView1.SelectedItems[0].Text);
+                p.Model = textBox3.Text;
+                p.SerialNumber = textBox1.Text;
+                p.EconomyCapacity = Convert.ToInt16(numericUpDown4.Value);
+                p.BusinessCapacity = Convert.ToInt16(numericUpDown3.Value);
+                p.FirstClassCapacity = Convert.ToInt16(numericUpDown2.Value);
+                p.Active = 1;
 
-            Program.MyConnection.Plane.Update(Convert.ToInt16(p.Id), p);
+                Program.MyConnection.Plane.Update(Convert.ToInt16(p.Id), p);
+
+                MessageBox.Show("Item edited");
+            }
 
         }
 
