@@ -71,6 +71,7 @@ namespace FlightControlWinForms
             Program.MyConnection.Route.Update(Convert.ToInt32(r.Id), r);
 
             MessageBox.Show("Item updated");
+            Reload();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -79,6 +80,26 @@ namespace FlightControlWinForms
             {
                 comboBox1.SelectedIndex = listView1.SelectedIndices[0];
                 comboBox3.SelectedIndex = listView1.SelectedIndices[0];
+            }
+        }
+
+        private void Reload()
+        {
+            FlightControlApi.Models.Route[] pilots = Program.MyConnection.Route.GetAll().ToArray();
+
+            string[] tmpRoute = new string[8];
+            ListViewItem lvi;
+
+            foreach (FlightControlApi.Models.Route p in pilots)
+            {
+                tmpRoute[0] = p.Id.ToString();
+                tmpRoute[1] = p.FromId.ToString();
+                tmpRoute[2] = p.DestinationId.ToString();
+
+
+                lvi = new ListViewItem(tmpRoute);
+
+                listView1.Items.Add(lvi);
             }
         }
     }

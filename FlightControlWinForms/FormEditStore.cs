@@ -85,6 +85,28 @@ namespace FlightControlWinForms
             Program.MyConnection.Store.Update(Convert.ToInt32(s.Id), s);
 
             MessageBox.Show("Item updated");
+            Reload();
+        }
+
+        private void Reload()
+        {
+            FlightControlApi.Models.Store[] pilots = Program.MyConnection.Store.GetAll().ToArray();
+
+            string[] tmpStore = new string[8];
+            ListViewItem lvi;
+
+            foreach (FlightControlApi.Models.Store p in pilots)
+            {
+                tmpStore[0] = p.Id.ToString();
+                tmpStore[1] = p.Name;
+                tmpStore[2] = p.Address;
+                tmpStore[3] = p.ZipCode.ToString();
+                tmpStore[4] = p.CountryId.ToString();
+
+                lvi = new ListViewItem(tmpStore);
+
+                listView1.Items.Add(lvi);
+            }
         }
     }
 }

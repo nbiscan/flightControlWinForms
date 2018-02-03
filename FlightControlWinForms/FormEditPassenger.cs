@@ -108,7 +108,6 @@ namespace FlightControlWinForms
                 lvi = new ListViewItem(tmpPassenger);
 
                 listView1.Items.Add(lvi);
-                comboBox3.Items.Add(tmpPassenger[4]);
             }
         }
     }

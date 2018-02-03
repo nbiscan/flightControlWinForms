@@ -204,6 +204,7 @@
             this.Controls.Add(this.listView1);
             this.Name = "FormEditAirport";
             this.Text = "FormEditAirport";
+            this.Load += new System.EventHandler(this.FormEditAirport_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

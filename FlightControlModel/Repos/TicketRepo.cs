@@ -140,6 +140,7 @@ namespace FlightControlModel.Repos
                                 "SET Price = @price, PassengerId = @passid, SeatId = @seatid, StoreId = @storeid, FlightId = @flightid " +
                                 "WHERE Id = @id ";
 
+            _comm.AddParameter("@id", p.Id);
             _comm.AddParameter("@price", p.Price);
             _comm.AddParameter("@passid", p.PassengerId);
             _comm.AddParameter("@seatid", p.SeatId);
