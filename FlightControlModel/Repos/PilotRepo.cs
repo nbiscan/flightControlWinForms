@@ -163,35 +163,32 @@ namespace FlightControlModel.Repos
         }
         public bool Delete(int id)
         {
-            _comm.CommandText = "DELETE FROM Pilot " +
-                                "WHERE Pilot.Id = @id;";
+            _comm.CommandText = "UPDATE Pilot " +
+                                 "SET Active = 0 " +
+                                 "WHERE Id = @id ";
 
             _comm.AddParameter("@id", id);
 
             _conn.Open();
 
-            _trans = _conn.BeginTransaction();
-
-            _comm.Transaction = _trans;
-
             try
             {
                 _comm.ExecuteNonQuery();
-                _trans.Commit();
+
+                _comm.Parameters.Clear();
+                _conn.Close();
+
+                return true;
             }
             catch (Exception ex)
             {
-                _trans.Rollback();
                 throw ex;
             }
             finally
             {
-                _comm.Transaction = null;
                 _comm.Parameters.Clear();
                 _conn.Close();
             }
-
-            return true;
         }
     }
 }

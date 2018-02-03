@@ -89,6 +89,7 @@ namespace FlightControlWinForms
 
             string[] tmpRoute = new string[8];
             ListViewItem lvi;
+            listView1.Items.Clear();
 
             foreach (FlightControlApi.Models.Route p in pilots)
             {

@@ -91,6 +91,7 @@ namespace FlightControlWinForms
 
             string[] tmpAirport = new string[5];
             ListViewItem lvi;
+            listView1.Items.Clear();
 
             foreach (FlightControlApi.Models.Airport p in pilots)
             {

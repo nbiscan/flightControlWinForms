@@ -104,5 +104,14 @@ namespace FlightControlWinForms
                
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.MyConnection.Ticket.Delete(Convert.ToInt16(listView1.SelectedItems[0].Text));
+
+            MessageBox.Show("Item deactivated.");
+
+            Reload();
+        }
     }
 }

@@ -71,6 +71,7 @@ namespace FlightControlWinForms
 
             string[] tmpPlane = new string[8];
             ListViewItem lvi;
+            listView1.Items.Clear();
 
             foreach (FlightControlApi.Models.Plane p in planes)
             {
@@ -115,6 +116,15 @@ namespace FlightControlWinForms
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.MyConnection.Plane.Delete(Convert.ToInt16(listView1.SelectedItems[0].Text));
+
+            MessageBox.Show("Item deactivated.");
+
+            Reload();
         }
     }
 }

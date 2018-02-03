@@ -94,6 +94,7 @@ namespace FlightControlWinForms
 
             string[] tmpStore = new string[8];
             ListViewItem lvi;
+            listView1.Items.Clear();
 
             foreach (FlightControlApi.Models.Store p in pilots)
             {
@@ -107,6 +108,11 @@ namespace FlightControlWinForms
 
                 listView1.Items.Add(lvi);
             }
+        }
+
+        private void FormEditStore_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

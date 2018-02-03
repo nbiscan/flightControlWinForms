@@ -79,6 +79,7 @@ namespace FlightControlWinForms
 
             string[] tmpPilot = new string[5];
             ListViewItem lvi;
+            listView1.Items.Clear();
 
             foreach (FlightControlApi.Models.Pilot p in pilots)
             {
@@ -93,6 +94,15 @@ namespace FlightControlWinForms
                 listView1.Items.Add(lvi);
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.MyConnection.Pilot.Delete(Convert.ToInt16(listView1.SelectedItems[0].Text));
+
+            MessageBox.Show("Item deactivated.");
+
+            Reload();
         }
     }
 }
