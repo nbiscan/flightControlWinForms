@@ -12,6 +12,7 @@ namespace FlightControlWinForms
     {
 
         Country[] countries = Program.MyConnection.Country.GetAll().ToArray();
+      
 
         public void AddAirports()
         {

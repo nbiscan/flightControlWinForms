@@ -89,7 +89,7 @@
             this.removeFlightToolStripMenuItem,
             this.editFlightToolStripMenuItem});
             this.flightsToolStripMenuItem.Name = "flightsToolStripMenuItem";
-            this.flightsToolStripMenuItem.Size = new System.Drawing.Size(97, 36);
+            this.flightsToolStripMenuItem.Size = new System.Drawing.Size(97, 38);
             this.flightsToolStripMenuItem.Text = "Flights";
             // 
             // addFlightToolStripMenuItem
@@ -128,7 +128,7 @@
             this.removeStoreToolStripMenuItem,
             this.editStoreToolStripMenuItem});
             this.passengersToolStripMenuItem.Name = "passengersToolStripMenuItem";
-            this.passengersToolStripMenuItem.Size = new System.Drawing.Size(92, 36);
+            this.passengersToolStripMenuItem.Size = new System.Drawing.Size(92, 38);
             this.passengersToolStripMenuItem.Text = "Stores";
             this.passengersToolStripMenuItem.Click += new System.EventHandler(this.passengersToolStripMenuItem_Click);
             // 
@@ -168,7 +168,7 @@
             this.removePilotToolStripMenuItem,
             this.editPilotToolStripMenuItem});
             this.pilotsToolStripMenuItem.Name = "pilotsToolStripMenuItem";
-            this.pilotsToolStripMenuItem.Size = new System.Drawing.Size(84, 36);
+            this.pilotsToolStripMenuItem.Size = new System.Drawing.Size(84, 38);
             this.pilotsToolStripMenuItem.Text = "Pilots";
             // 
             // viewPilotsToolStripMenuItem
@@ -207,7 +207,7 @@
             this.removeRouteToolStripMenuItem,
             this.editRouteToolStripMenuItem});
             this.routesToolStripMenuItem.Name = "routesToolStripMenuItem";
-            this.routesToolStripMenuItem.Size = new System.Drawing.Size(99, 36);
+            this.routesToolStripMenuItem.Size = new System.Drawing.Size(99, 38);
             this.routesToolStripMenuItem.Text = "Routes";
             // 
             // viewRoutesToolStripMenuItem
@@ -246,7 +246,7 @@
             this.removePassegerToolStripMenuItem,
             this.editPassengerToolStripMenuItem});
             this.passengerToolStripMenuItem.Name = "passengerToolStripMenuItem";
-            this.passengerToolStripMenuItem.Size = new System.Drawing.Size(143, 36);
+            this.passengerToolStripMenuItem.Size = new System.Drawing.Size(143, 38);
             this.passengerToolStripMenuItem.Text = "Passengers";
             // 
             // viewPassengersToolStripMenuItem
@@ -285,7 +285,7 @@
             this.removePlaneToolStripMenuItem,
             this.editPlaneToolStripMenuItem});
             this.planeToolStripMenuItem.Name = "planeToolStripMenuItem";
-            this.planeToolStripMenuItem.Size = new System.Drawing.Size(95, 36);
+            this.planeToolStripMenuItem.Size = new System.Drawing.Size(95, 38);
             this.planeToolStripMenuItem.Text = "Planes";
             // 
             // viewPlanesToolStripMenuItem
@@ -324,7 +324,7 @@
             this.removeAirportToolStripMenuItem,
             this.editAirportToolStripMenuItem});
             this.airportToolStripMenuItem.Name = "airportToolStripMenuItem";
-            this.airportToolStripMenuItem.Size = new System.Drawing.Size(110, 36);
+            this.airportToolStripMenuItem.Size = new System.Drawing.Size(110, 38);
             this.airportToolStripMenuItem.Text = "Airports";
             // 
             // viewAirportsToolStripMenuItem
@@ -363,7 +363,7 @@
             this.removeTicketToolStripMenuItem,
             this.editTicketToolStripMenuItem});
             this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
-            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(100, 36);
+            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(100, 38);
             this.ticketToolStripMenuItem.Text = "Tickets";
             // 
             // viewTicketsToolStripMenuItem
@@ -399,7 +399,7 @@
             this.countriesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewCountriesToolStripMenuItem});
             this.countriesToolStripMenuItem.Name = "countriesToolStripMenuItem";
-            this.countriesToolStripMenuItem.Size = new System.Drawing.Size(129, 36);
+            this.countriesToolStripMenuItem.Size = new System.Drawing.Size(129, 38);
             this.countriesToolStripMenuItem.Text = "Countries";
             // 
             // viewCountriesToolStripMenuItem
@@ -422,11 +422,11 @@
             this.airportToolStripMenuItem,
             this.ticketToolStripMenuItem,
             this.countriesToolStripMenuItem,
-            this.seatsToolStripMenuItem,
-            this.seatClassesToolStripMenuItem});
+            this.seatClassesToolStripMenuItem,
+            this.seatsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1974, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1974, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -438,34 +438,34 @@
             this.removeSeatToolStripMenuItem,
             this.editSeatToolStripMenuItem});
             this.seatsToolStripMenuItem.Name = "seatsToolStripMenuItem";
-            this.seatsToolStripMenuItem.Size = new System.Drawing.Size(83, 36);
+            this.seatsToolStripMenuItem.Size = new System.Drawing.Size(83, 38);
             this.seatsToolStripMenuItem.Text = "Seats";
             // 
             // viewSeatsToolStripMenuItem
             // 
             this.viewSeatsToolStripMenuItem.Name = "viewSeatsToolStripMenuItem";
-            this.viewSeatsToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
+            this.viewSeatsToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
             this.viewSeatsToolStripMenuItem.Text = "View Seats";
             this.viewSeatsToolStripMenuItem.Click += new System.EventHandler(this.viewSeatsToolStripMenuItem_Click);
             // 
             // addSeatToolStripMenuItem
             // 
             this.addSeatToolStripMenuItem.Name = "addSeatToolStripMenuItem";
-            this.addSeatToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
+            this.addSeatToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
             this.addSeatToolStripMenuItem.Text = "Add Seat";
             this.addSeatToolStripMenuItem.Click += new System.EventHandler(this.addSeatToolStripMenuItem_Click);
             // 
             // removeSeatToolStripMenuItem
             // 
             this.removeSeatToolStripMenuItem.Name = "removeSeatToolStripMenuItem";
-            this.removeSeatToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
+            this.removeSeatToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
             this.removeSeatToolStripMenuItem.Text = "Remove Seat";
             this.removeSeatToolStripMenuItem.Click += new System.EventHandler(this.removeSeatToolStripMenuItem_Click);
             // 
             // editSeatToolStripMenuItem
             // 
             this.editSeatToolStripMenuItem.Name = "editSeatToolStripMenuItem";
-            this.editSeatToolStripMenuItem.Size = new System.Drawing.Size(254, 38);
+            this.editSeatToolStripMenuItem.Size = new System.Drawing.Size(269, 38);
             this.editSeatToolStripMenuItem.Text = "Edit Seat";
             this.editSeatToolStripMenuItem.Click += new System.EventHandler(this.editSeatToolStripMenuItem_Click);
             // 
@@ -474,7 +474,7 @@
             this.seatClassesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewSeatClassesToolStripMenuItem});
             this.seatClassesToolStripMenuItem.Name = "seatClassesToolStripMenuItem";
-            this.seatClassesToolStripMenuItem.Size = new System.Drawing.Size(156, 36);
+            this.seatClassesToolStripMenuItem.Size = new System.Drawing.Size(156, 38);
             this.seatClassesToolStripMenuItem.Text = "Seat Classes";
             // 
             // viewSeatClassesToolStripMenuItem
