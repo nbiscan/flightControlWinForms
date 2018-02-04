@@ -76,15 +76,25 @@ namespace FlightControlModel.Repos
                     while (rdr.Read())
                     {
                         allPassengersIDs.Add(Convert.ToInt32(rdr["Id"]));
+
+                        allPassengers.Add(new Passenger()
+                        {
+                            Id = Convert.ToInt32(rdr["Id"]),
+                            Name = Convert.ToString(rdr["Name"]),
+                            Email = Convert.ToString(rdr["Email"]),
+                            Identifier = Convert.ToString(rdr["Identifier"]),
+                            CountryId = Convert.ToInt32(rdr["CountryId"])
+
+                        });
                     }
                 }
 
                 _conn.Close();
 
-                foreach (int id in allPassengersIDs)
-                {
-                    allPassengers.Add(this.Get(id));
-                }
+                //foreach (int id in allPassengersIDs)
+                //{
+                //    allPassengers.Add(this.Get(id));
+                //}
 
                 return allPassengers;
             }

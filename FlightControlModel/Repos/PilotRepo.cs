@@ -75,15 +75,24 @@ namespace FlightControlModel.Repos
                     while (rdr.Read())
                     {
                         allPilotsIDs.Add(Convert.ToInt32(rdr["Id"]));
+
+                        allPilots.Add(new Pilot()
+                        {
+                            Id = Convert.ToInt32(rdr["Id"]),
+                            FirstName = Convert.ToString(rdr["FirstName"]),
+                            LastName = Convert.ToString(rdr["LastName"]),
+                            BirthDay = Convert.ToDateTime(rdr["BirthDay"])
+
+                        });
                     }
                 }
 
                 _conn.Close();
 
-                foreach (int id in allPilotsIDs)
-                {
-                    allPilots.Add(this.Get(id));
-                }
+                //foreach (int id in allPilotsIDs)
+                //{
+                //    allPilots.Add(this.Get(id));
+                //}
 
                 return allPilots;
             }

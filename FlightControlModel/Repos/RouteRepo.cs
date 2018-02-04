@@ -74,15 +74,23 @@ namespace FlightControlModel.Repos
                     while (rdr.Read())
                     {
                         allRoutesIDs.Add(Convert.ToInt32(rdr["Id"]));
+
+                        allRoutes.Add(new Route()
+                        {
+                            Id = Convert.ToInt32(rdr["Id"]),
+                            FromId = Convert.ToInt32(rdr["FromId"]),
+                            DestinationId = Convert.ToInt32(rdr["DestinationId"])
+
+                        });
                     }
                 }
 
                 _conn.Close();
 
-                foreach (int id in allRoutesIDs)
-                {
-                    allRoutes.Add(this.Get(id));
-                }
+                //foreach (int id in allRoutesIDs)
+                //{
+                //    allRoutes.Add(this.Get(id));
+                //}
 
                 return allRoutes;
             }

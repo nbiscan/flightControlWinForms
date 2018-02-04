@@ -78,15 +78,27 @@ namespace FlightControlModel.Repos
                     while (rdr.Read())
                     {
                         allFlightsIDs.Add(Convert.ToInt32(rdr["Id"]));
+
+                        allFlights.Add(new Flight()
+                        {
+                            Id = Convert.ToInt32(rdr["Id"]),
+                            RouteId = Convert.ToInt32(rdr["RouteId"]),
+                            PlaneId = Convert.ToInt32(rdr["PlaneId"]),
+                            PilotId = Convert.ToInt32(rdr["PilotId"]),
+                            DepTime = Convert.ToDateTime(rdr["DepTime"]),
+                            ArrTime = Convert.ToDateTime(rdr["ArrTime"]),
+                            Canceled = Convert.ToBoolean(rdr["Canceled"]),
+                            Price = Convert.ToInt32(rdr["Price"])
+                        });
                     }
                 }
 
                 _conn.Close();
 
-                foreach (int id in allFlightsIDs)
-                {
-                    allFlights.Add(this.Get(id));
-                }
+                //foreach (int id in allFlightsIDs)
+                //{
+                //    allFlights.Add(this.Get(id));
+                //}
 
                 return allFlights;
             }

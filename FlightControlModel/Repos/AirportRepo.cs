@@ -86,15 +86,35 @@ namespace FlightControlModel.Repos
                     while (rdr.Read())
                     {
                         allAirportsIDs.Add(Convert.ToInt32(rdr["Id"]));
+
+                        int cid;
+                        if ((rdr["CountryId"] == DBNull.Value))
+                        {
+                            cid = 0;
+                        }
+                        else
+                        {
+                            cid = Convert.ToInt32(rdr["CountryId"]);
+                        }
+
+                        allAirports.Add(new Airport()
+                        {
+                            Id = Convert.ToInt32(rdr["Id"]),
+                            Name = Convert.ToString(rdr["Name"]),
+                            Address = Convert.ToString(rdr["Address"]),
+                            ZipCode = Convert.ToString(rdr["ZipCode"]),
+                            CountryId = cid
+
+                        });
                     }
                 }
 
                 _conn.Close();
 
-                foreach (int id in allAirportsIDs)
-                {
-                    allAirports.Add(this.Get(id));
-                }
+                //foreach (int id in allAirportsIDs)
+                //{
+                //    allAirports.Add(this.Get(id));
+                //}
 
                 return allAirports;
             }

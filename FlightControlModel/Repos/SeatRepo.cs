@@ -75,15 +75,24 @@ namespace FlightControlModel.Repos
                     while (rdr.Read())
                     {
                         allSeatsIDs.Add(Convert.ToInt32(rdr["Id"]));
+
+                        allSeats.Add(new Seat()
+                        {
+                            Id = Convert.ToInt32(rdr["Id"]),
+                            Num = Convert.ToInt32(rdr["Num"]),
+                            PlaneId = Convert.ToInt32(rdr["PlaneId"]),
+                            SeatClassId = Convert.ToInt32(rdr["SeatClassId"]),
+
+                        });
                     }
                 }
 
                 _conn.Close();
 
-                foreach (int id in allSeatsIDs)
-                {
-                    allSeats.Add(this.Get(id));
-                }
+                //foreach (int id in allSeatsIDs)
+                //{
+                //    allSeats.Add(this.Get(id));
+                //}
 
                 return allSeats;
             }

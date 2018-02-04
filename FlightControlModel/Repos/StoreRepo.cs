@@ -76,15 +76,25 @@ namespace FlightControlModel.Repos
                     while (rdr.Read())
                     {
                         allStoresIDs.Add(Convert.ToInt32(rdr["Id"]));
+
+                        allStores.Add(new Store()
+                        {
+                            Id = Convert.ToInt32(rdr["Id"]),
+                            Name = Convert.ToString(rdr["Name"]),
+                            Address = Convert.ToString(rdr["Address"]),
+                            ZipCode = Convert.ToString(rdr["ZipCode"]),
+                            CountryId = Convert.ToInt32(rdr["CountryId"])
+
+                        });
                     }
                 }
 
                 _conn.Close();
 
-                foreach (int id in allStoresIDs)
-                {
-                    allStores.Add(this.Get(id));
-                }
+                //foreach (int id in allStoresIDs)
+                //{
+                //    allStores.Add(this.Get(id));
+                //}
 
                 return allStores;
             }

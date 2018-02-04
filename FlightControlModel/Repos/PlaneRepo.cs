@@ -78,15 +78,27 @@ namespace FlightControlModel.Repos
                     while (rdr.Read())
                     {
                         allPlanesIDs.Add(Convert.ToInt32(rdr["Id"]));
+
+                        allPlanes.Add(new Plane()
+                        {
+                            Id = Convert.ToInt32(rdr["Id"]),
+                            Model = Convert.ToString(rdr["Model"]),
+                            SerialNumber = Convert.ToString(rdr["SerialNumber"]),
+                            EconomyCapacity = Convert.ToInt32(rdr["EconomyCapacity"]),
+                            BusinessCapacity = Convert.ToInt32(rdr["BusinessCapacity"]),
+                            FirstClassCapacity = Convert.ToInt32(rdr["FirstClassCapacity"]),
+                            Active = Convert.ToInt32(rdr["Active"])
+
+                        });
                     }
                 }
 
                 _conn.Close();
 
-                foreach (int id in allPlanesIDs)
-                {
-                    allPlanes.Add(this.Get(id));
-                }
+                //foreach (int id in allPlanesIDs)
+                //{
+                //    allPlanes.Add(this.Get(id));
+                //}
 
                 return allPlanes;
             }
