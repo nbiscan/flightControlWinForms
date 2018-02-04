@@ -33,9 +33,46 @@ namespace FlightControlWinForms
                 lvi = new ListViewItem(tmpSeat);
 
                 listView1.Items.Add(lvi);
-                comboBox1.Items.Add(p.PlaneId.ToString());
-                comboBox3.Items.Add(p.SeatClassId.ToString());
+                //comboBox1.Items.Add(p.PlaneId.ToString());
+                //comboBox3.Items.Add(p.SeatClassId.ToString());
 
+            }
+
+            //seatclass
+            FlightControlApi.Models.SeatClass[] items = Program.MyConnection.SeatClass.GetAll().ToArray();
+
+            string[] tmpSC = new string[8];
+            //ListViewItem lvi;
+
+            foreach (FlightControlApi.Models.SeatClass p in items)
+            {
+                tmpSC[0] = p.Id.ToString();
+                tmpSC[1] = p.Name.ToString();
+                tmpSC[2] = p.PriceMultipler.ToString();
+
+                lvi = new ListViewItem(tmpSC);
+
+                comboBox3.Items.Add(tmpSC[0] + ' ' + tmpSC[1]);
+            }
+
+            //plane 
+            Plane[] planes = Program.MyConnection.Plane.GetAll().ToArray();
+
+            string[] tmpPlane = new string[8];
+
+            foreach (Plane p in planes)
+            {
+                tmpPlane[0] = p.Id.ToString();
+                tmpPlane[1] = p.Model;
+                tmpPlane[2] = p.SerialNumber;
+                tmpPlane[3] = p.EconomyCapacity.ToString();
+                tmpPlane[4] = p.BusinessCapacity.ToString();
+                tmpPlane[5] = p.FirstClassCapacity.ToString();
+                tmpPlane[6] = p.Active.ToString();
+
+                lvi = new ListViewItem(tmpPlane);
+
+                comboBox1.Items.Add(tmpPlane[0] + ' ' + tmpPlane[1]);
             }
         }
 
@@ -67,9 +104,8 @@ namespace FlightControlWinForms
             {
                 Seat s = Program.MyConnection.Seat.Get(Convert.ToInt16(listView1.SelectedItems[0].Text));
                 numericUpDown4.Value = s.Num;
-                comboBox3.SelectedIndex = listView1.SelectedIndices[0];
-                comboBox1.SelectedIndex = listView1.SelectedIndices[0];
-
+                comboBox3.SelectedItem = s.SeatClassId.ToString() + ' ' + Program.MyConnection.SeatClass.Get(Convert.ToInt16(s.SeatClassId)).Name;
+                comboBox1.SelectedItem = s.PlaneId.ToString() + ' ' + Program.MyConnection.Plane.Get(Convert.ToInt16(s.PlaneId)).Model;
             }
         }
 
