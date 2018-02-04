@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightControlApi.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,13 +12,13 @@ namespace FlightControlWinForms
 {
     public partial class FormEditCountry : Form
     {
-        public FormEditCountry()
+        public FormEditCountry(Country[] countries)
         {
             InitializeComponent();
             listView1.FullRowSelect = true;
             listView1.MultiSelect = false;
 
-            FlightControlApi.Models.Country[] items = Program.MyConnection.Country.GetAll().ToArray();
+            FlightControlApi.Models.Country[] items = countries; //Program.MyConnection.Country.GetAll().ToArray();
 
             string[] tmpCountry = new string[6];
             ListViewItem lvi;

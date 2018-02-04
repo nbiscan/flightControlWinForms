@@ -12,10 +12,10 @@ namespace FlightControlWinForms
 {
     public partial class FormAddStore : Form
     {
-        public FormAddStore()
+        public FormAddStore(Country[] countries)
         {
             InitializeComponent();
-            Country[] items = Program.MyConnection.Country.GetAll().ToArray();
+            Country[] items = countries;//Program.MyConnection.Country.GetAll().ToArray();
 
             string[] tmpCountry = new string[6];
 

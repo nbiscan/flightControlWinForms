@@ -12,7 +12,7 @@ namespace FlightControlWinForms
 {
     public partial class FormEditStore : Form
     {
-        public FormEditStore()
+        public FormEditStore(Country[] countries)
         {
             InitializeComponent();
             listView1.FullRowSelect = true;
@@ -37,7 +37,7 @@ namespace FlightControlWinForms
                 //comboBox3.Items.Add(p.CountryId.ToString());
             }
 
-            Country[] items = Program.MyConnection.Country.GetAll().ToArray();
+            Country[] items = countries;//Program.MyConnection.Country.GetAll().ToArray();
 
             string[] tmpCountry = new string[6];
 

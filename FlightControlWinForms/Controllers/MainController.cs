@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightControlApi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -9,9 +10,12 @@ namespace FlightControlWinForms
 {
     public class MainController : IMainController
     {
+
+        Country[] countries = Program.MyConnection.Country.GetAll().ToArray();
+
         public void AddAirports()
         {
-            FormAddAirport faa = new FormAddAirport();
+            FormAddAirport faa = new FormAddAirport(countries);
             faa.ShowDialog();
         }
 
@@ -25,7 +29,7 @@ namespace FlightControlWinForms
 
         public void AddPassengers()
         {
-            FormAddPassenger fap = new FormAddPassenger();
+            FormAddPassenger fap = new FormAddPassenger(countries);
             fap.ShowDialog();
         }
 
@@ -55,7 +59,7 @@ namespace FlightControlWinForms
 
         public void AddStores()
         {
-            FormAddStore fas = new FormAddStore();
+            FormAddStore fas = new FormAddStore(countries);
             fas.ShowDialog();
         }
 
@@ -69,13 +73,13 @@ namespace FlightControlWinForms
 
         public void EditAirports()
         {
-            FormEditAirport fea = new FormEditAirport();
+            FormEditAirport fea = new FormEditAirport(countries);
             fea.ShowDialog();
         }
 
         public void EditCountries()
         {
-            FormEditCountry fec = new FormEditCountry();
+            FormEditCountry fec = new FormEditCountry(countries);
             fec.ShowDialog();
         }
 
@@ -87,7 +91,7 @@ namespace FlightControlWinForms
 
         public void EditPassengers()
         {
-            FormEditPassenger fep = new FormEditPassenger();
+            FormEditPassenger fep = new FormEditPassenger(countries);
             fep.ShowDialog();
         }
 
@@ -117,7 +121,7 @@ namespace FlightControlWinForms
 
         public void EditStores()
         {
-            FormEditStore fes = new FormEditStore();
+            FormEditStore fes = new FormEditStore(countries);
             fes.ShowDialog();
         }
 
@@ -132,13 +136,13 @@ namespace FlightControlWinForms
 
         public void RemoveAirports()
         {
-            FormEditAirport fea = new FormEditAirport();
+            FormEditAirport fea = new FormEditAirport(countries);
             fea.ShowDialog();
         }
 
         public void RemoveCountries()
         {
-            FormEditCountry fec = new FormEditCountry();
+            FormEditCountry fec = new FormEditCountry(countries);
             fec.ShowDialog();
         }
 
@@ -150,7 +154,7 @@ namespace FlightControlWinForms
 
         public void RemovePassengers()
         {
-            FormEditPassenger fep = new FormEditPassenger();
+            FormEditPassenger fep = new FormEditPassenger(countries);
             fep.ShowDialog();
         }
 
@@ -180,7 +184,7 @@ namespace FlightControlWinForms
 
         public void RemoveStores()
         {
-            FormEditStore fes = new FormEditStore();
+            FormEditStore fes = new FormEditStore(countries);
             fes.ShowDialog();
         }
 
@@ -194,13 +198,13 @@ namespace FlightControlWinForms
 
         public void ViewAirports()
         {
-            FormEditAirport fea = new FormEditAirport();
+            FormEditAirport fea = new FormEditAirport(countries);
             fea.ShowDialog();
         }
 
         public void ViewCountries()
         {
-            FormEditCountry fec = new FormEditCountry();
+            FormEditCountry fec = new FormEditCountry(countries);
             fec.ShowDialog();
         }
 
@@ -212,7 +216,7 @@ namespace FlightControlWinForms
 
         public void ViewPassengers()
         {
-            FormEditPassenger fep = new FormEditPassenger();
+            FormEditPassenger fep = new FormEditPassenger(countries);
             fep.ShowDialog();
         }
 
@@ -249,7 +253,7 @@ namespace FlightControlWinForms
 
         public void ViewStores()
         {
-            FormEditStore fes = new FormEditStore();
+            FormEditStore fes = new FormEditStore(countries);
             fes.ShowDialog();
         }
 
