@@ -36,8 +36,6 @@ namespace FlightControlModel.Repos
                         Id = Convert.ToInt32(rdr["id"]),
                         Name = Convert.ToString(rdr["Name"]),
                         PriceMultipler = Convert.ToInt32(rdr["PriceMultipler"])
-                        
-
                     };
 
                 }
@@ -75,15 +73,22 @@ namespace FlightControlModel.Repos
                     while (rdr.Read())
                     {
                         allSeatClasssIDs.Add(Convert.ToInt32(rdr["Id"]));
+
+                        allSeatClasss.Add(new SeatClass()
+                        {
+                            Id = Convert.ToInt32(rdr["id"]),
+                            Name = Convert.ToString(rdr["Name"]),
+                            PriceMultipler = Convert.ToInt32(rdr["PriceMultipler"])
+                        });
                     }
                 }
 
                 _conn.Close();
 
-                foreach (int id in allSeatClasssIDs)
-                {
-                    allSeatClasss.Add(this.Get(id));
-                }
+                //foreach (int id in allSeatClasssIDs)
+                //{
+                //    allSeatClasss.Add(this.Get(id));
+                //}
 
                 return allSeatClasss;
             }
